@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/coins.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/background.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/coin.png")]
 
 

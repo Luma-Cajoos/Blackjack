@@ -15,8 +15,8 @@
             <Rectangle Fill="#000" Opacity=".5"></Rectangle>
             <TextBlock Padding="10" FontSize="64" Foreground="#FFE600" HorizontalAlignment="Center" FontWeight="Bold">Blackjack Basic Strategy Learner</TextBlock>
         </Grid>
-        <StackPanel Margin="300 0 300 50">
-            <Button Style="{DynamicResource ButtonStyleYellow}" Margin="0 0 0 50" Padding="20" FontSize="20">
+        <StackPanel Margin="400 0 400 50">
+            <Button Name="BTNPlay" Click="BTNPlay_Click" Style="{DynamicResource ButtonStyleYellow}" Margin="0 0 0 50" Padding="20" FontSize="24">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -24,7 +24,7 @@
                 </Button.Resources>
             Play Blackjack
             </Button>
-            <Button Padding="20" FontSize="20"
+            <Button Name="BTNLearn" Click="BTNLearn_Click" Padding="20" FontSize="24"
                     Style="{StaticResource ButtonStyleYellow}">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -34,12 +34,12 @@
                 Learn Basic Strategy
             </Button>
         </StackPanel>
-        <Grid Margin="300 0">
+        <Grid Margin="400 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Style="{DynamicResource ButtonStyleOrange}" Grid.Column="0" Margin="0 0 20 0" Padding="20" FontSize="20">
+            <Button Style="{DynamicResource ButtonStyleOrange}" Grid.Column="0" Margin="0 0 20 0" Padding="20" FontSize="24">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -47,16 +47,25 @@
                 </Button.Resources>
                 How To Play
             </Button>
-            <Button Style="{DynamicResource ButtonStyleOrange}" Grid.Column="1" Margin="20 0 0 0" Padding="20" FontSize="20">
+            <Button Name="BTNReset" Click="BTNReset_Click" Style="{DynamicResource ButtonStyleOrange}" Grid.Column="1" Margin="20 0 0 0" Padding="20" FontSize="24">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
-                Settings
+                Reset Coins
             </Button>
         </Grid>
-        <TextBlock FontSize="24" Foreground="#FFE600" Margin="30 90 0 0">Created By Camus Mathias and Joos Luca</TextBlock>
+        <Grid Margin="30 70 30 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" FontSize="20" Foreground="#FFE600" Grid.Column="0">Created By Camus Mathias and Joos Luca</TextBlock>
+            <TextBlock Name="CoinDisplay" VerticalAlignment="Center" FontSize="28" Foreground="#FFE600" Grid.Column="1" Text="0"></TextBlock>
+            <Image VerticalAlignment="Center" Grid.Column="2" Margin="10 0 0 0" Source="/Images/coin.png" Width="40" Height="40"></Image>
+        </Grid>
     </StackPanel>
 </Window>
 
