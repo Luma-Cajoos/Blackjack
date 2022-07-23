@@ -13,5 +13,6 @@ namespace Blackjack_with_Basic_Strategy_learner
     /// </summary>
     public partial class App : Application
     {
+        public static MainWindow ParentWindowRef;
     }
 }

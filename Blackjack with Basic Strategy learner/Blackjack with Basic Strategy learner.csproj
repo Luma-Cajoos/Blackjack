@@ -10,7 +10,9 @@
 
   <ItemGroup>
     <None Remove="Data\coins.txt" />
+    <None Remove="Images\arrowreturn.png" />
     <None Remove="Images\background.png" />
+    <None Remove="Images\backgroundHowToPlay.png" />
     <None Remove="Images\coin.png" />
   </ItemGroup>
 
@@ -18,7 +20,13 @@
     <Content Include="Data\coins.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\arrowreturn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\backgroundHowToPlay.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\coin.png">

@@ -24,3 +24,9 @@ A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic St
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\App.baml
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\coin.png
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Data\coins.txt
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HowToPlay.g.cs
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HowToPlay.baml
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrowreturn.png
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\backgroundHowToPlay.png
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\StartingMenu.g.cs
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\StartingMenu.baml

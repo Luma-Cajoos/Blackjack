@@ -23,63 +23,15 @@ namespace Blackjack_with_Basic_Strategy_learner
     /// </summary>
     public partial class MainWindow : Window
     {
-        public double Coins { get; set; }
-        const string filepath = "./Data/coins.txt";
-
         public MainWindow()
         {
             InitializeComponent();
-            GetCoinsFromFile();
-            CheckResetBTN();
         }
 
-        private void GetCoinsFromFile()
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            UpdateCoins(double.Parse(File.ReadAllText(filepath)));
-        }
-        private void SaveCoinsToFile()
-        {
-            File.WriteAllText(filepath, Coins.ToString());
-        }
-
-        private void IncrementCoins(double increment)
-        {
-            double result = Coins + increment;
-            UpdateCoins(result);
-        }
-
-        private void DecrementCoins(double decrement)
-        {
-            double result = Coins - decrement;
-            UpdateCoins(result);
-            
-        }
-        private void CheckResetBTN()
-        {
-            BTNReset.IsEnabled = !(Coins > 10);
-        }
-
-        private void UpdateCoins(double coins)
-        {
-            Coins = coins;
-            CoinDisplay.Text = Coins.ToString();
-            CheckResetBTN();
-            SaveCoinsToFile();
-        }
-
-        private void BTNReset_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateCoins(500);
-        }
-
-        private void BTNPlay_Click(object sender, RoutedEventArgs e)
-        {
-            IncrementCoins(100);
-        }
-
-        private void BTNLearn_Click(object sender, RoutedEventArgs e)
-        {
-            DecrementCoins(100);
+            App.ParentWindowRef = this;
+            this.ParentFrame.Navigate(new StartingMenu());
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\App.xaml
-11407045341
-3134058792
-3-1233169557
+31397935071
+5-1158949403
+5-1078510148
 1941905061893
-MainWindow.xaml;
+HowToPlay.xaml;MainWindow.xaml;StartingMenu.xaml;
 
 False
 
