@@ -1,0 +1,24 @@
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.exe
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.deps.json
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.runtimeconfig.json
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.dll
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.pdb
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.csproj.AssemblyReference.cache
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\MainWindow.g.cs
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\App.g.cs
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner_MarkupCompile.cache
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner_MarkupCompile.lref
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\MainWindow.baml
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.g.resources
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.GeneratedMSBuildEditorConfig.editorconfig
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.AssemblyInfoInputs.cache
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.AssemblyInfo.cs
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.csproj.CoreCompileInputs.cache
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.dll
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\refint\Blackjack with Basic Strategy learner.dll
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.pdb
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.genruntimeconfig.cache
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\ref\Blackjack with Basic Strategy learner.dll
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\background.png
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner_Content.g.cs
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\App.baml

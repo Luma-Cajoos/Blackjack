@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Blackjack_with_Basic_Strategy_learner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="800" Width="1300"
+        ResizeMode="NoResize">
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/Images/background.png"></ImageBrush>
+        </StackPanel.Background>
+        <Grid Margin="0 90 0 120">
+            <Rectangle Fill="#000" Opacity=".5"></Rectangle>
+            <TextBlock Padding="10" FontSize="64" Foreground="#FFE600" HorizontalAlignment="Center" FontWeight="Bold">Blackjack Basic Strategy Learner</TextBlock>
+        </Grid>
+        <StackPanel Margin="300 0 300 50">
+            <Button Style="{DynamicResource ButtonStyleYellow}" Margin="0 0 0 50" Padding="20" FontSize="20">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            Play Blackjack
+            </Button>
+            <Button Padding="20" FontSize="20"
+                    Style="{StaticResource ButtonStyleYellow}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                Learn Basic Strategy
+            </Button>
+        </StackPanel>
+        <Grid Margin="300 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Style="{DynamicResource ButtonStyleOrange}" Grid.Column="0" Margin="0 0 20 0" Padding="20" FontSize="20">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                How To Play
+            </Button>
+            <Button Style="{DynamicResource ButtonStyleOrange}" Grid.Column="1" Margin="20 0 0 0" Padding="20" FontSize="20">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                Settings
+            </Button>
+        </Grid>
+        <TextBlock FontSize="24" Foreground="#FFE600" Margin="30 90 0 0">Created By Camus Mathias and Joos Luca</TextBlock>
+    </StackPanel>
 </Window>
+
+    
+    
+    
+    
+    
+    
