@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HowToPlay">
-
     <StackPanel>
         <StackPanel.Background>
             <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
@@ -23,20 +22,37 @@
             </Button>
             <TextBlock Grid.Column="1" Padding="10" FontSize="38" Foreground="#FFE600" HorizontalAlignment="Center" FontWeight="Bold">How to play ...?</TextBlock>
         </Grid>
-        <StackPanel Margin="30 0 0 10">
-            <TextBlock FontSize="25" Foreground="#FF9900" HorizontalAlignment="Left" FontWeight="Bold"> Blackjack</TextBlock>
-        </StackPanel>
-        <Grid Margin="30 0 ">
-            <TextBlock FontSize="15" Foreground="#fff" HorizontalAlignment="Left" FontWeight="Bold">The object of the game is to win money by creating card totals higher than those of the 
-                          dealer's hand but not exceeding 21, or by stopping at a total in the hope that dealer will bust.
-                          <LineBreak />  On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without
-                          <LineBreak />  taking a card), "double" (double their wager, take a single card, and finish),"split" (if the two cards have the same value, separate them to make two hands),                         <LineBreak /> or "surrender" (give up a half-bet and retire from the game). Number cards count as their number,
-                          <LineBreak /> the jack, queen, and king ("face cards" or "pictures") count as 10, and aces count as either 1 or 11 
-                          <LineBreak />according to the player's choice. 
-                          <LineBreak />If the total exceeds 21 points, it busts, and all bets on it immediately lose.
-            </TextBlock>
-
-        </Grid>
-
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <StackPanel Margin="30  0 30 30">
+                    <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Blackjack</TextBlock>
+                <StackPanel Margin="0 0 0 10">
+                        <TextBlock FontSize="20" Foreground="#FF9900">Main Goal Of The Game</TextBlock>
+                    <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                        The object of the game is to win money by creating card totals higher than those of the dealer's hand but not exceeding 21, or by stopping at a total in the hope that dealer will bust. On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a card), "double" (double their wager, take a single card, and finish),"split" (if the two cards have the same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the game). Number cards count as their number, according to the player's choice. If the total exceeds 21 points, it busts, and all bets on it immediately lose.
+                    </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0 0 0 10">
+                        <TextBlock FontSize="20" Foreground="#FF9900">Values Of The Cards</TextBlock>
+                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                        here comes the images of the cards with their value i think
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0 0 0 10">
+                        <TextBlock FontSize="20" Foreground="#FF9900">Betting Money</TextBlock>
+                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                        
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            <StackPanel Margin="30 0 0 0">
+                    <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Basic Strategy</TextBlock>
+                <TextBlock FontSize="15" Foreground="#fff"  TextWrapping="Wrap">
+                    The object of the game is to win money by creating card totals higher than those of the dealer's hand but not exceeding 21, or by stopping at a total in the hope that dealer will bust. On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a card), "double" (double their wager, take a single card, and finish),"split" (if the two cards have the same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the game). Number cards count as their number, according to the player's choice. If the total exceeds 21 points, it busts, and all bets on it immediately lose.
+                </TextBlock>
+                </StackPanel>
+                
+            </StackPanel>
+        </ScrollViewer>
     </StackPanel>
 </Page>
