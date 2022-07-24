@@ -54,6 +54,7 @@
     <None Remove="Images\GameAssets\Cards\ace_of_diamonds.png" />
     <None Remove="Images\GameAssets\Cards\ace_of_hearts.png" />
     <None Remove="Images\GameAssets\Cards\ace_of_spades.png" />
+    <None Remove="Images\GameAssets\Cards\back.png" />
     <None Remove="Images\GameAssets\Cards\jack_of_clubs.png" />
     <None Remove="Images\GameAssets\Cards\jack_of_diamonds.png" />
     <None Remove="Images\GameAssets\Cards\jack_of_hearts.png" />
@@ -210,6 +211,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GameAssets\Cards\ace_of_hearts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GameAssets\Cards\back.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GameAssets\Cards\jack_of_clubs.png">

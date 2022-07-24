@@ -52,6 +52,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/ace_of_clubs.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/ace_of_diamonds.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/ace_of_hearts.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/back.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/jack_of_clubs.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/jack_of_diamonds.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/gameassets/cards/jack_of_hearts.png")]

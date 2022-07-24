@@ -95,3 +95,4 @@ A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic St
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\ace_of_spades.png
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.g.cs
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.baml
+A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\back.png
