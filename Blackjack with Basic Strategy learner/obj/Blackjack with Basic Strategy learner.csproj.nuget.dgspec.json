@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Personal\\Appdev\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj": {}
+    "C:\\Users\\Lucaj\\Desktop\\Mathias\\Blackjack\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj": {}
   },
   "projects": {
-    "A:\\Personal\\Appdev\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj": {
+    "C:\\Users\\Lucaj\\Desktop\\Mathias\\Blackjack\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Personal\\Appdev\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj",
+        "projectUniqueName": "C:\\Users\\Lucaj\\Desktop\\Mathias\\Blackjack\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj",
         "projectName": "Blackjack with Basic Strategy learner",
-        "projectPath": "A:\\Personal\\Appdev\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj",
-        "packagesPath": "C:\\Users\\camus\\.nuget\\packages\\",
-        "outputPath": "A:\\Personal\\Appdev\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner\\obj\\",
+        "projectPath": "C:\\Users\\Lucaj\\Desktop\\Mathias\\Blackjack\\Blackjack with Basic Strategy learner\\Blackjack with Basic Strategy learner.csproj",
+        "packagesPath": "C:\\Users\\Lucaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucaj\\Desktop\\Mathias\\Blackjack\\Blackjack with Basic Strategy learner\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\camus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Lucaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows7.0"
@@ -63,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

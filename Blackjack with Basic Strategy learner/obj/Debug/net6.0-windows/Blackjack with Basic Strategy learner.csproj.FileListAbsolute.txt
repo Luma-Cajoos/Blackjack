@@ -96,3 +96,101 @@ A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic St
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.g.cs
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.baml
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\back.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Data\coins.txt
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrowreturn.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\background.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\backgroundHowToPlay.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\coin.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\10_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\10_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\10_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\10_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\2_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\2_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\2_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\2_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\3_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\3_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\3_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\3_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\4_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\4_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\4_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\4_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\5_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\5_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\5_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\5_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\6_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\6_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\6_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\6_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\7_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\7_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\7_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\7_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\8_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\8_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\8_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\8_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\9_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\9_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\9_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\9_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\ace_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\ace_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\ace_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\back.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\jack_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\jack_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\jack_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\jack_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\king_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\king_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\king_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\king_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\queen_of_clubs.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\queen_of_diamonds.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\queen_of_hearts.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\queen_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_1.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_10.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_100.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_1000.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_10000.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_25.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_250.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_5.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_50.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_500.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Chips\chip_5000.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\ace_of_spades.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.exe
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.deps.json
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.runtimeconfig.json
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.dll
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Blackjack with Basic Strategy learner.pdb
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.csproj.AssemblyReference.cache
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HowToPlay.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\StartingMenu.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner_Content.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner_MarkupCompile.cache
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner_MarkupCompile.lref
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\App.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HowToPlay.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\StartingMenu.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.g.resources
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.AssemblyInfoInputs.cache
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.AssemblyInfo.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.csproj.CoreCompileInputs.cache
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.dll
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\refint\Blackjack with Basic Strategy learner.dll
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.pdb
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.genruntimeconfig.cache
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\ref\Blackjack with Basic Strategy learner.dll
