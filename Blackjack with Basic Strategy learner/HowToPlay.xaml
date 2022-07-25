@@ -22,8 +22,8 @@
             </Button>
             <TextBlock Grid.Column="1" Padding="10" FontSize="38" Foreground="#FFE600" HorizontalAlignment="Center" FontWeight="Bold">How to play ...?</TextBlock>
         </Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled">
-            <StackPanel>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Height="600">
+            <StackPanel >
                 <StackPanel Margin="30  0 30 30">
                     <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Blackjack</TextBlock>
                     <StackPanel Margin="0 0 0 20">
