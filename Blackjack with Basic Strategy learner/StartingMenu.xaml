@@ -11,7 +11,7 @@
         <StackPanel.Background>
             <ImageBrush ImageSource="/Images/background.png"></ImageBrush>
         </StackPanel.Background>
-        <Grid Margin="0 90 0 120">
+        <Grid Margin="0 50 0 70">
             <Rectangle Fill="#000" Opacity=".5"></Rectangle>
             <TextBlock Padding="10" FontSize="64" Foreground="#FFE600" HorizontalAlignment="Center" FontWeight="Bold">Blackjack Basic Strategy Learner</TextBlock>
         </Grid>
@@ -24,7 +24,7 @@
                 </Button.Resources>
                 Play Blackjack
             </Button>
-            <Button Name="BTNLearn" Click="BTNLearn_Click" Padding="20" FontSize="24"
+            <Button Name="BTNLearn" Click="BTNLearn_Click" Margin="0 0 0 50" Padding="20" FontSize="24"
                     Style="{StaticResource ButtonStyleYellow}">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -32,6 +32,15 @@
                     </Style>
                 </Button.Resources>
                 Learn Basic Strategy
+            </Button>
+            <Button Name="BTNHiLoTraining" Click="BTNHiLoTraining_Click" Padding="20" FontSize="24"
+                    Style="{StaticResource ButtonStyleYellow}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                Hi-Lo Card counting Trainer
             </Button>
         </StackPanel>
         <Grid Margin="400 0">
@@ -56,7 +65,7 @@
                 Reset Coins
             </Button>
         </Grid>
-        <Grid Margin="30 50 30 0">
+        <Grid Margin="30 30 30 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>

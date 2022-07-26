@@ -84,5 +84,10 @@ namespace Blackjack_with_Basic_Strategy_learner
         {
             App.ParentWindowRef.ParentFrame.Navigate(new HowToPlay());
         }
+
+        private void BTNHiLoTraining_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
