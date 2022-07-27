@@ -23,6 +23,15 @@ namespace Blackjack_with_Basic_Strategy_learner
         public HiLoTrainerCard()
         {
             InitializeComponent();
+            Deck deck = new Deck();
+        }
+
+        private void InputCount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key.ToString() == "Return")
+            {
+                IMGCard.Source = new BitmapImage(new Uri("/Images/GameAssets/Cards/2_of_hearts.png", UriKind.Relative));
+            }
         }
     }
 }

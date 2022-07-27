@@ -27,12 +27,12 @@
                 <TextBlock FontSize="20" Foreground="#fff">This trainer only uses 1 deck.</TextBlock>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <Image Source="/Images/GameAssets/Cards/10_of_clubs.png" Margin="0 10 0 0" Width="150"></Image>
+                <Image Name="IMGCard" Source="/Images/GameAssets/Cards/10_of_clubs.png" Margin="0 10 0 0" Width="150"></Image>
                 <StackPanel Orientation="Horizontal" Margin="0 100 0 0">
                     <Label FontSize="20" VerticalAlignment="Center" Foreground="#fff">What is the count?</Label>
                     <Grid Margin="20 0 0 0">
                         <Border  BorderThickness="5" Grid.Row="0" Grid.ColumnSpan="2" CornerRadius="10" BorderBrush="#FFE600" Opacity="1" Background="Transparent">
-                            <TextBox Style="{DynamicResource InputMain}" Name="InputCount" FontSize="30" Padding="5 2" Background="Transparent" Foreground="#FFE600" Width="150"></TextBox>
+                            <TextBox Style="{DynamicResource InputMain}" Name="InputCount" KeyDown="InputCount_KeyDown" FontSize="30" Padding="5 2" Background="Transparent" Foreground="#FFE600" Width="150"></TextBox>
                         </Border>
                     </Grid>
                 </StackPanel>
@@ -53,3 +53,4 @@
         </Grid>
     </StackPanel>
 </Page>
+
