@@ -10,6 +10,12 @@
     <Compile Update="BlackjackGame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="HiLoChoice.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HiLoTrainerCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HowToPlay.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +25,12 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="BlackjackGame.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HiLoChoice.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HiLoTrainerCard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="HowToPlay.xaml">

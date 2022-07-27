@@ -88,6 +88,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         private void BTNHiLoTraining_Click(object sender, RoutedEventArgs e)
         {
 
+            App.ParentWindowRef.ParentFrame.Navigate(new HiLoChoice());
         }
     }
 }
