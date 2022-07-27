@@ -296,3 +296,7 @@ A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoChoice.baml
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCard.g.cs
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCard.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoChoice.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCard.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoChoice.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCard.baml

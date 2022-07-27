@@ -28,8 +28,11 @@
                     <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Blackjack</TextBlock>
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock FontSize="20" Foreground="#FF9900">Main Goal Of The Game</TextBlock>
-                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                        The object of the game is to win money by creating card totals higher than those of the dealer's hand but not exceeding 21, or by stopping at a total in the hope that dealer will bust. On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a card), "double" (double their wager, take a single card, and finish),"split" (if the two cards have the same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the game). Number cards count as their number, according to the player's choice. If the total exceeds 21 points, it busts, and all bets on it immediately lose.
+                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">                            
+                            The goal of this cardgame is to have a better hand then the dealer. The game starts with every player placing a bet. When all the bets are placed, the dealer gives everyone, including himself 2 cards.
+                            All cards from the players are dealt face-up. The dealer has one card face-up and one card face-down. Every player plays for himself against the dealer and not against the other players. The given two cards will form your <Bold>hand</Bold>.
+                            The game starts with the first player on the left of the dealer, and continues in clockwise order. Every player can ask for a card, split, double or pass his turn. When it is the dealers turn, he flips his face-down card face-up. When the sum is lower then 17, he draws a card until the sum of all cards in his hand is 17 or higher.                         
+                            Your hand is better when you are closer with the sum of your hand to 21 then the dealer. When you exeed 21, you immediately lose this round. When the dealer goes above 21, you win this round and you get double your bet.
                         </TextBlock>
                         <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
                         Note: When your hand is immediately a Blackjack, you win 1.5 ratio with your bets.
@@ -38,12 +41,84 @@
                     </StackPanel>
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock FontSize="20" Foreground="#FF9900">Values Of The Cards</TextBlock>
-                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                        here comes the images of the cards with their value i think
+                        <TextBlock Padding="0 0 0 15" FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                        This is an cardoverview and the value of the used cards
                         </TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Grid.Column="0">
+                                <Image Source="/Images/GameAssets/Cards/2_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">2</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="1">
+                                <Image Source="/Images/GameAssets/Cards/3_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">3</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="2">
+                                <Image Source="/Images/GameAssets/Cards/4_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">4</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="3">
+                                <Image Source="/Images/GameAssets/Cards/5_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">5</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="4">
+                                <Image Source="/Images/GameAssets/Cards/6_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">6</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="5">
+                                <Image Source="/Images/GameAssets/Cards/7_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">7</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="6">
+                                <Image Source="/Images/GameAssets/Cards/8_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">8</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="0">
+                                <Image Source="/Images/GameAssets/Cards/9_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">9</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1">
+                                <Image Source="/Images/GameAssets/Cards/10_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="2">
+                                <Image Source="/Images/GameAssets/Cards/jack_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="3">
+                                <Image Source="/Images/GameAssets/Cards/queen_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="4">
+                                <Image Source="/Images/GameAssets/Cards/king_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="5">
+                                <Image Source="/Images/GameAssets/Cards/ace_of_clubs.png" Width="70" Height="70"/>
+                                <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">1 or 11</Label>
+                            </StackPanel>
+                        </Grid>
                     </StackPanel>
                     <StackPanel>
                         <TextBlock  FontSize="20" Foreground="#FF9900">Betting Money</TextBlock>
+                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                            At the beginning of the game, you place a value of your chips on the table. This will be your bet. When the dealer has a better hand then you, or you go bust (when you exeed 21), you lose that bet.
+                            If you have a better hand, or the dealer goes bust, you win double the amount of your bet (10 dollars becomes 20 dollars). 
+                            When the first two cards you get is immediately a Blackjack, you can win 1.5 the value of your bets. 
+                        </TextBlock>
                     </StackPanel>
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock FontSize="20" Foreground="#FF9900">Actions</TextBlock>
@@ -76,7 +151,8 @@
                 <StackPanel Margin="30 0 0 0">
                     <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Basic Strategy</TextBlock>
                     <TextBlock FontSize="15" Foreground="#fff"  TextWrapping="Wrap">
-                    The object of the game is to win money by creating card totals higher than those of the dealer's hand but not exceeding 21, or by stopping at a total in the hope that dealer will bust. On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a card), "double" (double their wager, take a single card, and finish),"split" (if the two cards have the same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the game). Number cards count as their number, according to the player's choice. If the total exceeds 21 points, it busts, and all bets on it immediately lose.
+                        Here you find an image of basic strategy, it is very important that you memorize it. In the vertical column, you find the numbers that represents the sum of your hand. Horizontally you find the number of the open card of the dealer. Use this two numbers to decide in the table what the best move is the do. These are basic hints, but it could be the best decision yo make.                     
+                      
                     </TextBlock>
                 </StackPanel>
             </StackPanel>
