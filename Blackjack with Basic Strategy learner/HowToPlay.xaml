@@ -175,8 +175,8 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Margin="30 0 0 0">
-                    <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Basic Strategy</TextBlock>
-                    <TextBlock FontSize="15" Foreground="#fff"  TextWrapping="Wrap">
+                    <TextBlock  Style="{DynamicResource H2}" HorizontalAlignment="Left"> Basic Strategy</TextBlock>
+                    <TextBlock Style="{DynamicResource MainText}">
                         Here you find an image of basic strategy, it is very important that you memorize it. In the vertical column, you find the numbers that represents the sum of your hand. Horizontally you find the number of the open card of the dealer. Use this two numbers to decide in the table what the best move is the do. These are basic hints, but it could be the best decision yo make.                     
                       
                     </TextBlock>
