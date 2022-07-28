@@ -12,140 +12,166 @@
             <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
         </StackPanel.Background>
         <Grid Margin="30 20 0 20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="35"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="35"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Name="BTNReturn" Click="BTNReturn_Click" Background="Transparent">
-                <Image Grid.Column="0" Source="/Images/arrowreturn.png" Width="35" Height="35"></Image>
-            </Button>
-            <TextBlock Grid.Column="1" Padding="10" FontSize="38" Foreground="#FFE600" HorizontalAlignment="Center" FontWeight="Bold">How to play ...?</TextBlock>
+            <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">How to play ...?</TextBlock>
         </Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Height="600">
             <StackPanel >
                 <StackPanel Margin="30  0 30 30">
-                    <TextBlock FontSize="25" Foreground="#FFE600" HorizontalAlignment="Left" FontWeight="Bold"> Blackjack</TextBlock>
+                    <TextBlock Style="{DynamicResource H2}" HorizontalAlignment="Left"> Blackjack</TextBlock>
                     <StackPanel Margin="0 0 0 20">
-                        <TextBlock FontSize="20" Foreground="#FF9900">Main Goal Of The Game</TextBlock>
-                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">                            
-                            The goal of this cardgame is to have a better hand then the dealer. The game starts with every player placing a bet. When all the bets are placed, the dealer gives everyone, including himself 2 cards.
-                            All cards from the players are dealt face-up. The dealer has one card face-up and one card face-down. Every player plays for himself against the dealer and not against the other players. The given two cards will form your <Bold>hand</Bold>.
-                            The game starts with the first player on the left of the dealer, and continues in clockwise order. Every player can ask for a card, split, double or pass his turn. When it is the dealers turn, he flips his face-down card face-up. When the sum is lower then 17, he draws a card until the sum of all cards in his hand is 17 or higher.                         
-                            Your hand is better when you are closer with the sum of your hand to 21 then the dealer. When you exeed 21, you immediately lose this round. When the dealer goes above 21, you win this round and you get double your bet.
+                        <TextBlock Style="{DynamicResource H3}" FontSize="32" Foreground="#FF9900">Main Goal Of The Game</TextBlock>
+                        <TextBlock Style="{DynamicResource MainText}">                            
+                            The goal of this card game is to have a better hand than the dealer. The game starts with every player placing a bet. When all the bets are placed, the dealer gives everyone, including himself 2 cards.
+                            All cards from the players are dealt face-up. The dealer has one card face-up and one card face-down. Every player plays for himself against the dealer and not against the other players. The given two cards will form your hand.
+                            The game starts with the first player on the left of the dealer and continues in clockwise order. Every player can ask for a card, split, double, or pass his turn. When it is the dealer's turn, he flips his face-down card face-up. When the sum is lower than 17, he draws a card until the sum of all cards in his hand is 17 or higher.                         
+                            Your hand is better when you are closer with the sum of your hand to 21 than the dealer. When you exceed 21, you immediately lose this round. When the dealer goes above 21, you win this round and you get double your bet.
                         </TextBlock>
-                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                        <TextBlock Style="{DynamicResource MainText}">
                         Note: When your hand is immediately a Blackjack, you win 1.5 ratio with your bets.
                         </TextBlock>
-
                     </StackPanel>
                     <StackPanel Margin="0 0 0 20">
-                        <TextBlock FontSize="20" Foreground="#FF9900">Values Of The Cards</TextBlock>
-                        <TextBlock Padding="0 0 0 15" FontSize="15" Foreground="#fff" TextWrapping="Wrap">
+                        <TextBlock Style="{DynamicResource H3}">Values Of The Cards</TextBlock>
+                        <TextBlock Padding="0 0 0 15"  Style="{DynamicResource MainText}">
                         This is an cardoverview and the value of the used cards
                         </TextBlock>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
-                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"></RowDefinition>
                                 <RowDefinition Height="auto"></RowDefinition>
                             </Grid.RowDefinitions>
-                            <StackPanel Grid.Row="0" Grid.Column="0">
-                                <Image Source="/Images/GameAssets/Cards/2_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/2_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">2</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="0" Grid.Column="1">
-                                <Image Source="/Images/GameAssets/Cards/3_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/3_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">3</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="0" Grid.Column="2">
-                                <Image Source="/Images/GameAssets/Cards/4_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/4_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">4</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="0" Grid.Column="3">
-                                <Image Source="/Images/GameAssets/Cards/5_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="3" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/5_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">5</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="0" Grid.Column="4">
-                                <Image Source="/Images/GameAssets/Cards/6_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="4" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/6_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">6</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="0" Grid.Column="5">
-                                <Image Source="/Images/GameAssets/Cards/7_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="5" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/7_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">7</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="0" Grid.Column="6">
-                                <Image Source="/Images/GameAssets/Cards/8_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="0" Grid.Column="6" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/8_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">8</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="1" Grid.Column="0">
-                                <Image Source="/Images/GameAssets/Cards/9_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/9_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">9</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="1" Grid.Column="1">
-                                <Image Source="/Images/GameAssets/Cards/10_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/10_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="1" Grid.Column="2">
-                                <Image Source="/Images/GameAssets/Cards/jack_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/jack_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="1" Grid.Column="3">
-                                <Image Source="/Images/GameAssets/Cards/queen_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/queen_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="1" Grid.Column="4">
-                                <Image Source="/Images/GameAssets/Cards/king_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/king_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">10</Label>
                             </StackPanel>
-                            <StackPanel Grid.Row="1" Grid.Column="5">
-                                <Image Source="/Images/GameAssets/Cards/ace_of_clubs.png" Width="70" Height="70"/>
+                            <StackPanel Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left">
+                                <Image Source="/Images/GameAssets/Cards/ace_of_clubs.png" Width="100"/>
                                 <Label HorizontalAlignment="Center" FontSize="24" Foreground="#fff">1 or 11</Label>
                             </StackPanel>
                         </Grid>
                     </StackPanel>
-                    <StackPanel>
-                        <TextBlock  FontSize="20" Foreground="#FF9900">Betting Money</TextBlock>
-                        <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                            At the beginning of the game, you place a value of your chips on the table. This will be your bet. When the dealer has a better hand then you, or you go bust (when you exeed 21), you lose that bet.
-                            If you have a better hand, or the dealer goes bust, you win double the amount of your bet (10 dollars becomes 20 dollars). 
-                            When the first two cards you get is immediately a Blackjack, you can win 1.5 the value of your bets. 
+                    <StackPanel Margin="0 0 0 20">
+                        <TextBlock Style="{DynamicResource H3}">Betting Money</TextBlock>
+                        <TextBlock Style="{DynamicResource MainText}" Margin="0 0 0 10">
+                            Betting in Blackjack is fairly easy to understand. At the beginning of each round you can bet a value in chips, for this example, let's say you bet 10 dollars.
                         </TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Margin="0 0 10 10" Grid.Column="0" Grid.Row="0">
+                                <TextBlock Style="{DynamicResource H4}">Hitting a Blackjack</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">When you have a Blackjack with your 2 first cards you win 1.5 times your bet on a Blackjack table that pays 3 to 2. So with our example bet of 10 dollars, you would now have 25 dollars.</TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="10 0 0 10" Grid.Column="1" Grid.Row="0">
+                                <TextBlock Style="{DynamicResource H4}">Winning against the dealer</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">If you win against the dealer your bet is doubled. With our example, you just won 20 dollars.</TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="0 0 10 0" Grid.Column="0" Grid.Row="1">
+                                <TextBlock Style="{DynamicResource H4}">Losing against the dealer</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">If you lose against the dealer your bet is lost. With our example, you just lost 10 dollars.</TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="10 0 0 10" Grid.Column="1" Grid.Row="1">
+                                <TextBlock Style="{DynamicResource H4}">Equal against the dealer</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">If you push against the dealer your bet is returned to you. With our example, you get your 10 dollars back.</TextBlock>
+                            </StackPanel>
+                        </Grid>
+                        
                     </StackPanel>
                     <StackPanel Margin="0 0 0 20">
-                        <TextBlock FontSize="20" Foreground="#FF9900">Actions</TextBlock>
-                        <StackPanel Margin="0 0 0 10">
-                            <TextBlock FontSize="18" Foreground="#FFE600">Hit</TextBlock>
-                            <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                                You ask the dealer for one card. You can ask additional cards for as long as your hand's total is 21 or less. When you have a blackjack, your turn ends automatically.
-                            </TextBlock>
-                        </StackPanel>
-                        <StackPanel Margin="0 0 0 10">
-                            <TextBlock FontSize="18" Foreground="#FFE600">Stand</TextBlock>
-                            <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                           You pass your turn and you do not ask the dealer for a card. Your turn ends.
-                            </TextBlock>
-                        </StackPanel>
-                        <StackPanel Margin="0 0 0 10">
-                            <TextBlock FontSize="18" Foreground="#FFE600">Double</TextBlock>
-                            <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                            You can only use this as your first action. You double your bet and asks the dealer for one card only. It automatically passes your turn.
-                            </TextBlock>
-                        </StackPanel>
-                        <StackPanel Margin="0 0 0 10">
-                            <TextBlock FontSize="18" Foreground="#FFE600">Split</TextBlock>
-                            <TextBlock FontSize="15" Foreground="#fff" TextWrapping="Wrap">
-                           You can only use this when you have 2 cards with the same value in your hand. The dealer splits your cards and makes two piles from it. Each pile is now a hand separately. For each hand, you can ask for more cards or stand that specific hand. Then the dealer goes to the next hand.
-                            </TextBlock>
-                        </StackPanel>
+                        <TextBlock Style="{DynamicResource H3}">Actions</TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Margin="0 0 10 10" Grid.Column="0" Grid.Row="0">
+                                <TextBlock Style="{DynamicResource H4}">Hit</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">
+                                    You ask the dealer for one card. You can ask additional cards for as long as your hand's total is 21 or less. When you have a blackjack, your turn ends automatically.
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="10 0 0 10" Grid.Column="1" Grid.Row="0">
+                                <TextBlock Style="{DynamicResource H4}">Stand</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">
+                               You pass your turn and you do not ask the dealer for a card. Your turn ends.
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="0 0 10 0" Grid.Column="0" Grid.Row="1">
+                                <TextBlock Style="{DynamicResource H4}">Double</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">
+                                You can only use this as your first action. You double your bet and asks the dealer for one card only. It automatically passes your turn.
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Margin="10 0 0 10" Grid.Column="1" Grid.Row="1">
+                                <TextBlock Style="{DynamicResource H4}">Split</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">
+                               You can only use this when you have 2 cards with the same value in your hand. The dealer splits your cards and makes two piles from it. Each pile is now a hand separately. For each hand, you can ask for more cards or stand that specific hand. Then the dealer goes to the next hand.
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Margin="30 0 0 0">

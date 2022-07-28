@@ -19,6 +19,63 @@
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#000"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#000"/>
+        
+        
+        <!-- main text -->
+        <Style x:Key="MainText" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="#FFF"/>
+        </Style>
+
+
+        <!-- heading 2 -->
+        <Style x:Key="H2" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="Foreground" Value="#FFE600"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+
+        <!-- heading 3 -->
+        <Style x:Key="H3" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="Foreground" Value="#FF9900"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+
+        <!-- heading 4 -->
+        <Style x:Key="H4" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Foreground" Value="#FFE600"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <!-- main page title -->
+        <Style x:Key="PageTitle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="64"/>
+            <Setter Property="Foreground" Value="#FFE600"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        
+        
+        
+        
+        
+        
+        
+        
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
@@ -93,6 +150,7 @@
         <SolidColorBrush x:Key="Button.Static.Foreground1" Color="#000"/>
         <SolidColorBrush x:Key="Button.MouseOver.Foreground1" Color="#FF9900"/>
         <SolidColorBrush x:Key="Button.Pressed.Foreground1" Color="#FF9900"/>
+        
         
         <Style x:Key="ButtonStyleOrange" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>

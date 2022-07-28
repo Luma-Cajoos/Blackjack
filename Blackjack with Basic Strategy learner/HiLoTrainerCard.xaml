@@ -47,7 +47,7 @@
                             </Style>
                         </Rectangle.Resources>
                     </Rectangle>
-                    <Label Name="LabelGuessResult" HorizontalAlignment="Center" Padding="0 20" FontSize="20" Foreground="#fff">CORRECT/WRONG IT WAS ...</Label>
+                    <Label Name="LabelGuessResult" HorizontalAlignment="Center" Padding="0 20" FontSize="20" Foreground="#fff">0</Label>
                 </Grid>
             </StackPanel>
         </Grid>
