@@ -47,18 +47,24 @@ namespace Blackjack_with_Basic_Strategy_learner
         {
             if (e.Key.ToString() == "Return")
             {
-                bool guessIsCorrect = Game.GuessRunningCount(int.Parse(InputCount.Text));
+                if(InputCount.Text != "")
+                {                    
+                    bool parsedCorrect = int.TryParse(InputCount.Text, out int guess);
+                    if (parsedCorrect)
+                    {
+                        bool guessIsCorrect = Game.GuessRunningCount(guess);
 
-                if (guessIsCorrect)
-                {
-                    LabelGuessResult.Content = $"CORRECT";
-                } else
-                {
-                    LabelGuessResult.Content = $"WRONG IT WAS {Game.RunningCount}";
+                        if (guessIsCorrect)
+                        {
+                            LabelGuessResult.Content = $"CORRECT";
+                        } else
+                        {
+                            LabelGuessResult.Content = $"WRONG IT WAS {Game.RunningCount}";
+                        }
+                        UpdateCard();
+                    }
                 }
-
                 InputCount.Text = "";
-                UpdateCard();
             }
         }
     }

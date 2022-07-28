@@ -19,7 +19,7 @@
                 <StackPanel Margin="30  0 30 30">
                     <TextBlock Style="{DynamicResource H2}" HorizontalAlignment="Left"> Blackjack</TextBlock>
                     <StackPanel Margin="0 0 0 20">
-                        <TextBlock Style="{DynamicResource H3}" FontSize="32" Foreground="#FF9900">Main Goal Of The Game</TextBlock>
+                        <TextBlock Style="{DynamicResource H3}">Main Goal Of The Game</TextBlock>
                         <TextBlock Style="{DynamicResource MainText}">                            
                             The goal of this card game is to have a better hand than the dealer. The game starts with every player placing a bet. When all the bets are placed, the dealer gives everyone, including himself 2 cards.
                             All cards from the players are dealt face-up. The dealer has one card face-up and one card face-down. Every player plays for himself against the dealer and not against the other players. The given two cards will form your hand.
@@ -33,7 +33,7 @@
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock Style="{DynamicResource H3}">Values Of The Cards</TextBlock>
                         <TextBlock Padding="0 0 0 15"  Style="{DynamicResource MainText}">
-                        This is an cardoverview and the value of the used cards
+                        This is a valueoverview of the used cards.
                         </TextBlock>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -131,10 +131,9 @@
                             </StackPanel>
                             <StackPanel Margin="10 0 0 10" Grid.Column="1" Grid.Row="1">
                                 <TextBlock Style="{DynamicResource H4}">Equal against the dealer</TextBlock>
-                                <TextBlock Style="{DynamicResource MainText}">If you push against the dealer your bet is returned to you. With our example, you get your 10 dollars back.</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">If you have an equal value of cards against the dealer your bet is returned to you. With our example, you get your 10 dollars back. This is called a Push.</TextBlock>
                             </StackPanel>
-                        </Grid>
-                        
+                        </Grid>                        
                     </StackPanel>
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock Style="{DynamicResource H3}">Actions</TextBlock>
@@ -174,10 +173,10 @@
                         </Grid>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Margin="30 0 0 0">
+                <StackPanel Margin="30 0 0 20">
                     <TextBlock  Style="{DynamicResource H2}" HorizontalAlignment="Left"> Basic Strategy</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">
-                        Here you find an image of basic strategy, it is very important that you memorize it. In the vertical column, you find the numbers that represents the sum of your hand. Horizontally you find the number of the open card of the dealer. Use this two numbers to decide in the table what the best move is the do. These are basic hints, but it could be the best decision yo make.                     
+                        Here you find an image of basic strategy, it is very important that you memorize it. In the vertical column, you find the numbers that represents the sum of your hand. Horizontally you find the number of the open card of the dealer. Use this two numbers to decide in the table what the best move is to do. These are basic hints, but it could be the best decision you make.                     
                       
                     </TextBlock>
                 </StackPanel>
