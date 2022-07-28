@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blackjack_with_Basic_Strategy_learner
 {
-    class Deck
+    public class Deck
     {
         private const int _numberOfCardsInDeck = 52;
         private string[] _numbers = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "j", "q", "k", "a" };
@@ -16,7 +16,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         public Deck()
         {
             CreateDeck();
-            ShuffleDeck();
+
         }
 
         public void CreateDeck()
@@ -45,7 +45,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                             break;
                         case "a":
                             path += "ace";
-                            value = 10;
+                            value = 11;
                             break;
                         default:
                             path += _numbers[i];
@@ -80,18 +80,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             }
         }
 
-        public void ShuffleDeck()
-        {
-            // Fisher-Yates shuffle.
-            Random r = new Random();
+        
 
-            for (int i = _cards.Length - 1; i > 0; --i)
-            {
-                int k = r.Next(i + 1);
-                Card temp = _cards[i];
-                _cards[i] = _cards[k];
-                _cards[k] = temp;
-            }
-        }
     }
 }

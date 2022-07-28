@@ -20,17 +20,45 @@ namespace Blackjack_with_Basic_Strategy_learner
     /// </summary>
     public partial class HiLoTrainerCard : Page
     {
+        public HiLoTrainingGame Game { get; set; }
+
         public HiLoTrainerCard()
         {
             InitializeComponent();
-            Deck deck = new Deck();
+            Game = new HiLoTrainingGame(1);
+            UpdateCard();
+        }
+
+        public void UpdateCard()
+        {
+            Card playCard = Game.DrawCard();
+            if(playCard.Name != "ResetCard")
+            {
+                IMGCard.Source = new BitmapImage(new Uri(playCard.Path, UriKind.Relative));
+
+            } else
+            {
+                IMGCard.Source = new BitmapImage(new Uri(playCard.Path, UriKind.Relative));
+                MessageBox.Show("deck is empty");
+            }
         }
 
         private void InputCount_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key.ToString() == "Return")
             {
-                IMGCard.Source = new BitmapImage(new Uri("/Images/GameAssets/Cards/2_of_hearts.png", UriKind.Relative));
+                bool guessIsCorrect = Game.GuessRunningCount(int.Parse(InputCount.Text));
+
+                if (guessIsCorrect)
+                {
+                    LabelGuessResult.Content = $"CORRECT";
+                } else
+                {
+                    LabelGuessResult.Content = $"WRONG IT WAS {Game.RunningCount}";
+                }
+
+                InputCount.Text = "";
+                UpdateCard();
             }
         }
     }

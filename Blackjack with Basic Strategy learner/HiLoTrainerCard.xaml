@@ -22,7 +22,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel>
                 <TextBlock Foreground="#FFE600" FontSize="24" FontWeight="Bold">Explanation</TextBlock>
-                <TextBlock TextWrapping="Wrap" Foreground="#fff" Margin="0 0 0 10" FontSize="20"><Bold>In Hi-Lo card counting, every card gets a specific value. </Bold> Cards <Bold> 2-6 </Bold> have the value <Bold> +1</Bold>. Cards <Bold> 7, 8, and 9 </Bold> have the value of <Bold>0</Bold>. Cards <Bold>10 and Ace </Bold>have the value of <Bold>-1</Bold>.</TextBlock>
+                <TextBlock TextWrapping="Wrap" Foreground="#fff" Margin="0 0 0 10" FontSize="20"><Bold>In Hi-Lo card counting, every card gets a specific value. </Bold> Cards <Bold> 2-6 </Bold> have the value <Bold> +1</Bold>. Cards <Bold> 7, 8, and 9 </Bold> have the value of <Bold>0</Bold>. Cards <Bold>10 and Ace</Bold> have the value of <Bold>-1</Bold>.</TextBlock>
                 <TextBlock TextWrapping="Wrap" Foreground="#fff" Margin="0 0 0 10" FontSize="20">After every card we want you to give us the so-called running count in the input field, after that press enter. A new card will be dealt and on the right, you can see whether your count was correct.</TextBlock>
                 <TextBlock FontSize="20" Foreground="#fff">This trainer only uses 1 deck.</TextBlock>
             </StackPanel>
@@ -47,7 +47,7 @@
                             </Style>
                         </Rectangle.Resources>
                     </Rectangle>
-                    <Label HorizontalAlignment="Center" Padding="0 20" FontSize="20" Foreground="#fff">CORRECT/WRONG IT WAS ...</Label>
+                    <Label Name="LabelGuessResult" HorizontalAlignment="Center" Padding="0 20" FontSize="20" Foreground="#fff">CORRECT/WRONG IT WAS ...</Label>
                 </Grid>
             </StackPanel>
         </Grid>

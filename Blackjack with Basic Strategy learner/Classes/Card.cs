@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blackjack_with_Basic_Strategy_learner
 {
-    class Card
+    public class Card
     {
         public int Value { get; set; }
         public string Name { get; set; }
