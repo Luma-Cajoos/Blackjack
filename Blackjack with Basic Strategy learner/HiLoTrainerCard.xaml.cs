@@ -35,11 +35,10 @@ namespace Blackjack_with_Basic_Strategy_learner
             if(playCard.Name != "ResetCard")
             {
                 IMGCard.Source = new BitmapImage(new Uri(playCard.Path, UriKind.Relative));
-
+                TextBlockCardsLeft.Text = $"{52 - Game.CardsDrawn} cards left";
             } else
             {
-                IMGCard.Source = new BitmapImage(new Uri(playCard.Path, UriKind.Relative));
-                MessageBox.Show("deck is empty");
+                App.ParentWindowRef.ParentFrame.Navigate(new HiLoTrainerCardReset());
             }
         }
 
@@ -63,13 +62,13 @@ namespace Blackjack_with_Basic_Strategy_learner
                         }
                         UpdateCard();
 
-                        InputCount.Text = "";
                     }
                     else
                     {
                         MessageBox.Show("Please enter a number");
                     }
 
+                    InputCount.Text = "";
                 } else
                 {
                     MessageBox.Show("Please enter a number");

@@ -12,7 +12,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         public int DecksInPlay { get; set; }
 
         public Card[] _cards;
-        private int CardsDrawn { get; set; }
+        public int CardsDrawn { get; set; }
         public int RunningCount { get; set; }
 
         public HiLoTrainingGame(int decksInPlay)
