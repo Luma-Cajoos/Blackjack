@@ -27,13 +27,13 @@
                             Your hand is better when you are closer with the sum of your hand to 21 than the dealer. When you exceed 21, you immediately lose this round. When the dealer goes above 21, you win this round and you get double your bet.
                         </TextBlock>
                         <TextBlock Style="{DynamicResource MainText}">
-                        Note: When your hand is immediately a Blackjack, you win 1.5 ratio with your bets.
+                        Note: When your hand is immediately a Blackjack at a 3 to 2 table, you win 1.5 ratio with your bets.
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock Style="{DynamicResource H3}">Values Of The Cards</TextBlock>
                         <TextBlock Padding="0 0 0 15"  Style="{DynamicResource MainText}">
-                        This is a valueoverview of the used cards.
+                        This is a value overview of the used cards.
                         </TextBlock>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -172,6 +172,7 @@
                             </StackPanel>
                         </Grid>
                     </StackPanel>
+
                 </StackPanel>
                 <StackPanel Margin="30 0 30 20">
                     <TextBlock  Style="{DynamicResource H2}" HorizontalAlignment="Left"> Basic Strategy</TextBlock>
