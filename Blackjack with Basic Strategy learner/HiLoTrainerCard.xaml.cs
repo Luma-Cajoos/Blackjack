@@ -62,9 +62,18 @@ namespace Blackjack_with_Basic_Strategy_learner
                             LabelGuessResult.Content = $"WRONG IT WAS {Game.RunningCount}";
                         }
                         UpdateCard();
+
+                        InputCount.Text = "";
                     }
+                    else
+                    {
+                        MessageBox.Show("Please enter a number");
+                    }
+
+                } else
+                {
+                    MessageBox.Show("Please enter a number");
                 }
-                InputCount.Text = "";
             }
         }
     }
