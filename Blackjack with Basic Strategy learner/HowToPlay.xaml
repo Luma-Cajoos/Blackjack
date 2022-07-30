@@ -178,8 +178,420 @@
                     <TextBlock  Style="{DynamicResource H2}" HorizontalAlignment="Left"> Basic Strategy</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">
                         Here you find an image of basic strategy, it is very important that you memorize it. In the vertical column, you find the numbers that represents the sum of your hand. Horizontally you find the number of the open card of the dealer. Use this two numbers to decide in the table what the best move is to do. These are basic hints, but it could be the best decision you make.                     
-                      
                     </TextBlock>
+                      <Grid>
+                          
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                             <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+
+
+
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Grid.ColumnSpan="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource H4}">Dealers Card</TextBlock>
+                        </StackPanel>
+                          <!-- Eerste rij -->
+                        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource H4}">Player</TextBlock>                              
+                          </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold" >2</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">3</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">4</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">5</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">6</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">7</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">8</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">9</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">10</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">A</TextBlock>
+                        </StackPanel>
+<!-- Player 17 -->
+                        <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">17</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+<!-- Player 16 -->
+                        <StackPanel Grid.Row="3"  Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">16</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>                        
+<!--Player 15-->
+                        <StackPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">15</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>                       
+<!--Player 14 -->
+                        <StackPanel Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">14</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+
+<!-- Player 13 -->
+                        <StackPanel Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">13</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+<!-- Player 12-->
+                        <StackPanel Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">12</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="7" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+<!-- Player 11-->
+                        <StackPanel Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">11</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="8" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+<!--Player 10-->
+                        <StackPanel Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">10</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="9" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <!--Player 9-->
+                        <StackPanel Grid.Row="10" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">9</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="10" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <!--Player 8-->
+
+                        <StackPanel Grid.Row="11" Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">8</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="11" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
+                        </StackPanel>
+
+                    </Grid>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>
