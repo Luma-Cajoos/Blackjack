@@ -14,6 +14,14 @@ namespace Blackjack_with_Basic_Strategy_learner
         public Card[] _cards;
         public int CardsDrawn { get; set; }
 
+        // card value totals
+        public int _playerTotal = 0;
+        public int _dealerTotal = 0;
+
+        // hidden dealer card
+        public Card _hiddenDealerCard = null;
+        public string _hiddenCardPath = "/Images/GameAssets/cards/back.png";
+
         // betting vars
         public double _currentBet = 0;
 
