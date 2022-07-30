@@ -72,7 +72,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNPlay_Click(object sender, RoutedEventArgs e)
         {
-            IncrementCoins(100);
+            App.ParentWindowRef.ParentFrame.Navigate(new BlackjackGame());
         }
 
         private void BTNLearn_Click(object sender, RoutedEventArgs e)

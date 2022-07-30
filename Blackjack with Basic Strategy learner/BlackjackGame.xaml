@@ -11,6 +11,121 @@
         <StackPanel.Background>
             <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
         </StackPanel.Background>
-        
+        <Grid Margin="0 0 0 10">
+            <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Blackjack</TextBlock>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Grid>
+                    <Rectangle Fill="#000" Opacity=".5" Margin="200 0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Dealer</Label>
+                </Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="/Images/GameAssets/Cards/10_of_clubs.png" Margin="0 10 10 0" Width="110"></Image>
+                    <Image Source="/Images/GameAssets/Cards/2_of_clubs.png" Margin="0 10 0 0" Width="110"></Image>
+                </StackPanel>
+                <Grid Margin="0 10 0 0">
+                    <Rectangle Fill="#000" Opacity=".5" Margin="270 0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">0</Label>
+                </Grid>
+            </StackPanel>
+            <Grid Grid.Column="0" Grid.Row="1" Margin="0 -100 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="/Images/GameAssets/Chips/chip_1.png" Grid.Column="0" Grid.Row="0" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_5.png" Grid.Column="1" Grid.Row="0" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_10.png" Grid.Column="2" Grid.Row="0" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_25.png" Grid.Column="0" Grid.Row="1" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_50.png" Grid.Column="1" Grid.Row="1" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_100.png" Grid.Column="2" Grid.Row="1" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_250.png" Grid.Column="0" Grid.Row="2" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_500.png" Grid.Column="1" Grid.Row="2" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_1000.png" Grid.Column="2" Grid.Row="2" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_5000.png" Grid.Column="0" Grid.Row="3" Margin="5"></Image>
+                <Image Source="/Images/GameAssets/Chips/chip_10000.png" Grid.Column="1" Grid.Row="3" Margin="5"></Image>
+            </Grid>
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="0 70 0 0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                    <Image Source="/Images/GameAssets/Cards/5_of_spades.png" Margin="0 10 10 0" Width="110"></Image>
+                    <Image Source="/Images/GameAssets/Cards/2_of_hearts.png" Margin="-90 -20 0 0" Width="110"></Image>
+                </StackPanel>
+                <Grid Margin="0 10 0 0">
+                    <Rectangle Fill="#000" Opacity=".5" Margin="270 0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">0</Label>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom" Margin="0 0 0 50">
+                <Grid Margin="0 10 0 0">
+                    <Rectangle Fill="#000" Opacity=".5" Margin="0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Bet: $ 0</Label>
+                </Grid>
+                <Grid Margin="0 10 0 20">
+                    <Rectangle Fill="#000" Opacity=".5" Margin="0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Balance: $ 0</Label>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 0 5 5" Padding="10" Grid.Column="0" Grid.Row="0" Name="BTNHit">HIT</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 0 0 5" Padding="10" Grid.Column="1" Grid.Row="0" Name="BTNStand">STAND</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 5 5 0" Padding="10" Grid.Column="0" Grid.Row="1" Name="BTNDouble">DOUBLE</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 5 0 0" Padding="10" Grid.Column="1" Grid.Row="1" Name="BTNSplit">SPLIT</Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
     </StackPanel>
 </Page>
