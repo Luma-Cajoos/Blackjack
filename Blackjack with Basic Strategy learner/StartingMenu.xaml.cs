@@ -21,53 +21,36 @@ namespace Blackjack_with_Basic_Strategy_learner
     /// </summary>
     public partial class StartingMenu : Page
     {
-        public double Coins { get; set; }
+        public Coins Coins { get; set; }
         const string filepath = "./Data/coins.txt";
 
         public StartingMenu()
         {
             InitializeComponent();
-            GetCoinsFromFile();
-            CheckResetBTN();
-        }
 
-        private void GetCoinsFromFile()
-        {
-            UpdateCoins(double.Parse(File.ReadAllText(filepath)));
+            Coins = new Coins();
+            CheckResetBTN();
+            UpdateCoins();
         }
         private void SaveCoinsToFile()
         {
             File.WriteAllText(filepath, Coins.ToString());
         }
-
-        private void IncrementCoins(double increment)
-        {
-            double result = Coins + increment;
-            UpdateCoins(result);
-        }
-
-        private void DecrementCoins(double decrement)
-        {
-            double result = Coins - decrement;
-            UpdateCoins(result);
-
-        }
         private void CheckResetBTN()
         {
-            BTNReset.IsEnabled = !(Coins > 10);
+            BTNReset.IsEnabled = !(Coins.Amount > 10);
         }
 
-        private void UpdateCoins(double coins)
+        private void UpdateCoins()
         {
-            Coins = coins;
-            CoinDisplay.Text = Coins.ToString();
+            CoinDisplay.Text = Coins.Amount.ToString();
             CheckResetBTN();
-            SaveCoinsToFile();
         }
 
         private void BTNReset_Click(object sender, RoutedEventArgs e)
         {
-            UpdateCoins(500);
+            Coins.ResetCoins();
+            UpdateCoins();
         }
 
         private void BTNPlay_Click(object sender, RoutedEventArgs e)
@@ -77,7 +60,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNLearn_Click(object sender, RoutedEventArgs e)
         {
-            DecrementCoins(100);
+            
         }
 
         private void BTNHowToPlay_Click(object sender, RoutedEventArgs e)
