@@ -14,6 +14,11 @@ namespace Blackjack_with_Basic_Strategy_learner
         public Card[] _cards;
         public int CardsDrawn { get; set; }
 
+        // betting vars
+        public double _currentBet = 0;
+
+        private bool _bettingAllowed = true;
+
         public Blackjack(int decksInPlay)
         {
             DecksInPlay = decksInPlay;
@@ -62,6 +67,35 @@ namespace Blackjack_with_Basic_Strategy_learner
             CardsDrawn++;
 
             return returnedCard;
+        }
+
+        // betting methods
+        public void IncreaseBet(double amount, double balance)
+        {
+            if(_bettingAllowed)
+            {
+                if(_currentBet + amount >= balance)
+                {
+                    _currentBet = balance;
+                    return;
+                }
+
+                _currentBet += amount;
+            }
+        }
+
+        public void DecreaseBet(double amount)
+        {
+            if (_bettingAllowed)
+            {
+                if(_currentBet - amount <= 0)
+                {
+                    _currentBet = 0;
+                    return;
+                }
+
+                _currentBet -= amount;
+            }
         }
     }
 }
