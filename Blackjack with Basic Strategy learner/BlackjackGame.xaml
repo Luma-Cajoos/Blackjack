@@ -62,17 +62,39 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Image Source="/Images/GameAssets/Chips/chip_1.png" Grid.Column="0" Grid.Row="0" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_5.png" Grid.Column="1" Grid.Row="0" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_10.png" Grid.Column="2" Grid.Row="0" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_25.png" Grid.Column="0" Grid.Row="1" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_50.png" Grid.Column="1" Grid.Row="1" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_100.png" Grid.Column="2" Grid.Row="1" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_250.png" Grid.Column="0" Grid.Row="2" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_500.png" Grid.Column="1" Grid.Row="2" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_1000.png" Grid.Column="2" Grid.Row="2" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_5000.png" Grid.Column="0" Grid.Row="3" Margin="5"></Image>
-                <Image Source="/Images/GameAssets/Chips/chip_10000.png" Grid.Column="1" Grid.Row="3" Margin="5"></Image>
+                <Button Name="BTNChip1" Click="BTNChip1_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="0" Grid.Row="0">
+                    <Image Source="/Images/GameAssets/Chips/chip_1.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip5" Click="BTNChip5_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="1" Grid.Row="0">
+                    <Image Source="/Images/GameAssets/Chips/chip_5.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip10" Click="BTNChip10_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="2" Grid.Row="0">
+                    <Image Source="/Images/GameAssets/Chips/chip_10.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip25" Click="BTNChip25_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="0" Grid.Row="1">
+                    <Image Source="/Images/GameAssets/Chips/chip_25.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip50" Click="BTNChip50_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="1" Grid.Row="1">
+                    <Image Source="/Images/GameAssets/Chips/chip_50.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip100" Click="BTNChip100_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="2" Grid.Row="1">
+                    <Image Source="/Images/GameAssets/Chips/chip_100.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip250" Click="BTNChip250_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="0" Grid.Row="2">
+                    <Image Source="/Images/GameAssets/Chips/chip_250.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip500" Click="BTNChip500_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="1" Grid.Row="2">
+                    <Image Source="/Images/GameAssets/Chips/chip_500.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip1000" Click="BTNChip1000_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="2" Grid.Row="2">
+                    <Image Source="/Images/GameAssets/Chips/chip_1000.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip5000" Click="BTNChip5000_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="0" Grid.Row="3">
+                    <Image Source="/Images/GameAssets/Chips/chip_5000.png" Margin="5"></Image>
+                </Button>
+                <Button Name="BTNChip10000" Click="BTNChip10000_Click" Style="{DynamicResource ButtonTransparent}" Grid.Column="1" Grid.Row="3">
+                    <Image Source="/Images/GameAssets/Chips/chip_10000.png" Margin="5"></Image>
+                </Button>
             </Grid>
             <StackPanel Grid.Column="1" Grid.Row="1" Margin="0 70 0 0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
@@ -99,7 +121,7 @@
                             </Style>
                         </Rectangle.Resources>
                     </Rectangle>
-                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Bet: $ 0</Label>
+                    <Label Name="LabelBet" HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Bet: $ 0</Label>
                 </Grid>
                 <Grid Margin="0 10 0 20">
                     <Rectangle Fill="#000" Opacity=".5" Margin="0">
@@ -109,7 +131,7 @@
                             </Style>
                         </Rectangle.Resources>
                     </Rectangle>
-                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Balance: $ 0</Label>
+                    <Label Name="LabelBalance" HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Balance: $ 0</Label>
                 </Grid>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -120,10 +142,10 @@
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 0 5 5" Padding="10" Grid.Column="0" Grid.Row="0" Name="BTNHit">HIT</Button>
-                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 0 0 5" Padding="10" Grid.Column="1" Grid.Row="0" Name="BTNStand">STAND</Button>
-                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 5 5 0" Padding="10" Grid.Column="0" Grid.Row="1" Name="BTNDouble">DOUBLE</Button>
-                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 5 0 0" Padding="10" Grid.Column="1" Grid.Row="1" Name="BTNSplit">SPLIT</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 0 5 5" Padding="10" Grid.Column="0" Grid.Row="0" Name="BTNHit" Click="BTNHit_Click">HIT</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 0 0 5" Padding="10" Grid.Column="1" Grid.Row="0" Name="BTNStand" Click="BTNStand_Click">STAND</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 5 5 0" Padding="10" Grid.Column="0" Grid.Row="1" Name="BTNDouble" Click="BTNDouble_Click">DOUBLE</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 5 0 0" Padding="10" Grid.Column="1" Grid.Row="1" Name="BTNSplit" Click="BTNSplit_Click">SPLIT</Button>
                 </Grid>
             </StackPanel>
         </Grid>

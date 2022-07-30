@@ -24,5 +24,10 @@ namespace Blackjack_with_Basic_Strategy_learner
         {
             InitializeComponent();
         }
+
+        private void BTNChip1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
