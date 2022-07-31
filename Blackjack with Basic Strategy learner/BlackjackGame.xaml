@@ -97,20 +97,23 @@
                     </Button>
                 </Grid>
             </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="1" Margin="0 70 0 0" VerticalAlignment="Bottom">
-                <StackPanel Name="ContainerPlayerCards" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+            <Grid Grid.Column="1" Grid.Row="1" Margin="0 70 0 0" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Name="ColDefSplit" Width="0"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <StackPanel Name="ContainerPlayerCards" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                    </StackPanel>
+                    <Grid Margin="0 10 0 0">
+                        <Rectangle Name="RectFirstDeck" Fill="#000" Opacity=".5" Margin="270 0"></Rectangle>
+                        <Label Name="LabelPlayerTotal" HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">0</Label>
+                    </Grid>
                 </StackPanel>
-                <Grid Margin="0 10 0 0">
-                    <Rectangle Fill="#000" Opacity=".5" Margin="270 0">
-                        <Rectangle.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Rectangle.Resources>
-                    </Rectangle>
-                    <Label Name="LabelPlayerTotal" HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">0</Label>
-                </Grid>
-            </StackPanel>
+                <StackPanel Grid.Column="1" Name="ContainerSplitDeck">
+                    
+                </StackPanel>
+            </Grid>
             <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom" Margin="0 0 0 50">
                 <Grid Margin="0 10 0 0">
                     <Rectangle Fill="#000" Opacity=".5" Margin="0">

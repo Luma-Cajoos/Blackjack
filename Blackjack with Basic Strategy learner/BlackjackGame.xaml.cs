@@ -256,7 +256,8 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNSplit_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateDeck();
+            ColDefSplit.Width = new GridLength(1, GridUnitType.Star);
         }
 
         private void BTNDeal_Click(object sender, RoutedEventArgs e)
@@ -449,6 +450,46 @@ namespace Blackjack_with_Basic_Strategy_learner
             Game.DecreaseBet(10000);
             updateBet();
             UpdateBTNDeal();
+        }
+
+        private void CreateDeck()
+        {
+            // create stackpanel for cards
+            StackPanel splitDeckContainer = new StackPanel();
+            splitDeckContainer.Orientation = Orientation.Horizontal;
+            splitDeckContainer.HorizontalAlignment = HorizontalAlignment.Center;
+            splitDeckContainer.Margin = new Thickness(0, 20, 0, 0);
+
+            ContainerSplitDeck.Children.Add(splitDeckContainer);
+
+            // create grid for label
+            Grid labelGrid = new Grid();
+            labelGrid.Margin = new Thickness(0, 10, 0, 0);
+
+            // create rectangle
+            Rectangle rectangle = new Rectangle()
+            {
+                Fill = Brushes.Black,
+                Opacity = 0.5,
+                Margin = new Thickness(135, 0, 135, 0)
+            };
+
+            labelGrid.Children.Add(rectangle);
+
+            // create label
+            Label labelSplitTotal = new Label();
+            labelSplitTotal.HorizontalAlignment = HorizontalAlignment.Center;
+            labelSplitTotal.Padding = new Thickness(0, 10, 0, 10);
+            labelSplitTotal.FontSize = 20;
+            labelSplitTotal.Foreground = Brushes.White;
+            labelSplitTotal.Content = "0";
+
+            labelGrid.Children.Add(labelSplitTotal);
+
+            ContainerSplitDeck.Children.Add(labelGrid);
+
+            // change margin on first label
+            RectFirstDeck.Margin = new Thickness(135, 0, 135, 0);
         }
     }
 }
