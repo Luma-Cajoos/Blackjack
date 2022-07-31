@@ -11,12 +11,14 @@ namespace Blackjack_with_Basic_Strategy_learner
         public int Value { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
+        public bool IsAce { get; set; }
 
-        public Card(string name, string path, int value)
+        public Card(string name, string path, int value, bool isAce)
         {
             Name = name;
             Path = path;
             Value = value;
+            IsAce = isAce;
         }
     }
 }

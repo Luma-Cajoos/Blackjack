@@ -71,7 +71,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             if (CardsDrawn >= _cards.Length)
             {
                 // return the card with back image and a name of resetCard
-                return new Card("ResetCard", "/Images/GameAssets/cards/back.png", 0);
+                return new Card("ResetCard", "/Images/GameAssets/cards/back.png", 0, false);
             }
 
             Card returnedCard = _cards[CardsDrawn];

@@ -76,7 +76,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             ContainerPlayerCards.Children.Add(cardImg);
 
             // update player card total
-            Game.UpdatePlayerTotal();
+            Game.UpdateTotalsAndCheckForAce();
             UpdatePlayerTotalLabel();
 
             // prepare margins for next img
@@ -120,7 +120,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
 
             // update player card total
-            Game.UpdateDealerTotal();
+            Game.UpdateTotalsAndCheckForAce();
             UpdateDealerTotalLabel();
         }
 

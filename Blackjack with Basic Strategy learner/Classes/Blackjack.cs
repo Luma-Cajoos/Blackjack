@@ -84,7 +84,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         public void TurnHiddenCard()
         {
             _dealerCards.Add(_hiddenDealerCard);
-            UpdateDealerTotal();
+            UpdateTotalsAndCheckForAce();
         }
 
         public string PlayerHasWon()
@@ -115,6 +115,41 @@ namespace Blackjack_with_Basic_Strategy_learner
             _dealerTotal = 0;
             _playerTotal = 0;
             _bettingAllowed = true;
+        }
+
+        public void UpdateTotalsAndCheckForAce()
+        {
+            // check for ace in player cards
+
+            // count total
+            UpdatePlayerTotal();
+            for (int i = 0; i < _playerCards.Count; i++)
+            {
+                if (_playerCards[i].IsAce)
+                {
+                    // check if total is over 21, if true total - 10
+                    if(_playerTotal > 21)
+                    {
+                        _playerTotal -= 10;
+                    }
+                }
+            }
+            
+            // check for ace in dealer cards
+
+            // count total
+            UpdateDealerTotal();
+            for (int i = 0; i < _dealerCards.Count; i++)
+            {
+                if (_dealerCards[i].IsAce)
+                {
+                    // check if total is over 21, if true total - 10
+                    if (_dealerTotal > 21)
+                    {
+                        _dealerTotal -= 10;
+                    }
+                }
+            }
         }
 
         // betting methods

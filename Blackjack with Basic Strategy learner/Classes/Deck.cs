@@ -28,6 +28,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                 {
                     string path = "/Images/GameAssets/cards/";
                     int value;
+                    bool isAce = false;
 
                     switch (_numbers[i])
                     {
@@ -46,6 +47,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                         case "a":
                             path += "ace";
                             value = 11;
+                            isAce = true;
                             break;
                         default:
                             path += _numbers[i];
@@ -73,7 +75,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
                     path += ".png";
 
-                    _cards[counter] = new Card($"{_numbers[i]}{_types[j]}", path, value);
+                    _cards[counter] = new Card($"{_numbers[i]}{_types[j]}", path, value, isAce);
 
                     counter++;
                 }
