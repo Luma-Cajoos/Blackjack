@@ -225,7 +225,10 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNDouble_Click(object sender, RoutedEventArgs e)
         {
-
+            Game._currentBet *= 2;
+            updateBet();
+            PlayerDrawCard();
+            EndGame();
         }
 
         private void BTNSplit_Click(object sender, RoutedEventArgs e)
