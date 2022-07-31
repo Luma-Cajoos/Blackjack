@@ -186,7 +186,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         }
 
-        private void EndGame()
+        private void EndGame(bool blackjackPayout)
         {
             // turn the hidden dealer card
             Game.TurnHiddenCard();
@@ -201,7 +201,30 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             // get the result
             string result = Game.PlayerHasWon();
-            MessageBox.Show(result);
+
+            if (blackjackPayout)
+            {
+                Coins.Amount += (Game._currentBet * 2.5);
+                MessageBox.Show("blackjack");
+            } else
+            {
+                switch (result)
+                {
+                    case "win":
+                        Coins.Amount += (Game._currentBet*2);
+                        break;
+                    case "push":
+                        Coins.Amount += Game._currentBet;
+                        break;
+                    default:
+                        break;
+                }
+                
+                MessageBox.Show(result);
+            }
+
+            Coins.SaveCoins();
+            UpdateCoins();
 
             // clear cards
             ResetScreen();
@@ -214,13 +237,13 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             if(Game._playerTotal >= 21)
             {
-                EndGame();
+                EndGame(false);
             }
         }
 
         private void BTNStand_Click(object sender, RoutedEventArgs e)
         {
-            EndGame();
+            EndGame(false);
         }
 
         private void BTNDouble_Click(object sender, RoutedEventArgs e)
@@ -228,7 +251,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             Game._currentBet *= 2;
             updateBet();
             PlayerDrawCard();
-            EndGame();
+            EndGame(false);
         }
 
         private void BTNSplit_Click(object sender, RoutedEventArgs e)
@@ -243,6 +266,12 @@ namespace Blackjack_with_Basic_Strategy_learner
             BTNDeal.IsEnabled = false;
 
             Game._bettingAllowed = false;
+
+            // take the bet from the balance
+            Coins.Amount -= Game._currentBet;
+            Coins.SaveCoins();
+            UpdateCoins();
+            
 
             // here we start the game
             // deal cards to player and dealer
@@ -264,8 +293,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             // does the player have blackjack after dealing
             if(Game._playerTotal == 21)
             {
-                MessageBox.Show("blackjack!");
-                EndGame();
+                EndGame(true);
             }
         }
 
