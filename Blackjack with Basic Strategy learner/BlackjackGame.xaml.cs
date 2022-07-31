@@ -367,6 +367,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         private void BTNSplit_Click(object sender, RoutedEventArgs e)
         {
             BTNDouble.IsEnabled = false;
+            BTNSplit.IsEnabled = false;
 
             // setup split container
             CreateDeck();
