@@ -17,9 +17,11 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         // card value totals
         public List<Card> _playerCards = new List<Card>();
+        public List<Card> _playerCardsSplit = new List<Card>();
         public List<Card> _dealerCards = new List<Card>();
 
         public int _playerTotal = 0;
+        public int _playerTotalSplit = 0;
         public int _dealerTotal = 0;
 
         // hidden dealer card
@@ -30,6 +32,10 @@ namespace Blackjack_with_Basic_Strategy_learner
         public double _currentBet = 0;
 
         public bool _bettingAllowed = true;
+
+        // splitting vars
+        public bool _playerUsedSplit = false;
+        public int _activeDeck = 0;
 
         public Blackjack(int decksInPlay)
         {
@@ -87,19 +93,56 @@ namespace Blackjack_with_Basic_Strategy_learner
             UpdateTotalsAndCheckForAce();
         }
 
+        public void SplitDeck()
+        {
+            _playerUsedSplit = true;
+
+            // move latest card to split deck
+            Card temp = _playerCards[_playerCards.Count-1];
+            _playerCardsSplit.Add(temp);
+
+            _playerCards.Remove(temp);
+
+            // update the totals
+            UpdateTotalsAndCheckForAce();
+        }
+
         public string PlayerHasWon()
         {
             string win = "win";
             string loss = "loss";
             string equal = "push";
 
-            if(_playerTotal <= 21 && _dealerTotal > 21)
+            if (_playerTotal <= 21 && _dealerTotal > 21)
             {
                 return win;
-            } else if (_playerTotal <= 21 && _dealerTotal < _playerTotal)
+            }
+            else if (_playerTotal <= 21 && _dealerTotal < _playerTotal)
             {
                 return win;
-            } else if(_playerTotal == _dealerTotal)
+            }
+            else if (_playerTotal == _dealerTotal)
+            {
+                return equal;
+            }
+
+            return loss;
+        }
+        public string PlayerSplitHasWon()
+        {
+            string win = "win";
+            string loss = "loss";
+            string equal = "push";
+
+            if (_playerTotalSplit <= 21 && _dealerTotal > 21)
+            {
+                return win;
+            }
+            else if (_playerTotalSplit <= 21 && _dealerTotal < _playerTotalSplit)
+            {
+                return win;
+            }
+            else if (_playerTotalSplit == _dealerTotal)
             {
                 return equal;
             }
@@ -111,10 +154,13 @@ namespace Blackjack_with_Basic_Strategy_learner
         {
             _dealerCards.Clear();
             _playerCards.Clear();
+            _playerCardsSplit.Clear();
             _currentBet = 0;
             _dealerTotal = 0;
             _playerTotal = 0;
             _bettingAllowed = true;
+            _playerUsedSplit = false;
+            _activeDeck = 0;
         }
 
         public void UpdateTotalsAndCheckForAce()
@@ -134,7 +180,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                     }
                 }
             }
-            
+
             // check for ace in dealer cards
 
             // count total
@@ -147,6 +193,25 @@ namespace Blackjack_with_Basic_Strategy_learner
                     if (_dealerTotal > 21)
                     {
                         _dealerTotal -= 10;
+                    }
+                }
+            }
+
+            if (_playerUsedSplit)
+            {
+                // check for ace in dealer cards
+
+                // count total
+                UpdatePlayerSplitTotal();
+                for (int i = 0; i < _playerCardsSplit.Count; i++)
+                {
+                    if (_playerCardsSplit[i].IsAce)
+                    {
+                        // check if total is over 21, if true total - 10
+                        if (_playerTotalSplit > 21)
+                        {
+                            _playerTotalSplit -= 10;
+                        }
                     }
                 }
             }
@@ -193,6 +258,17 @@ namespace Blackjack_with_Basic_Strategy_learner
             }
         }
         
+        public void UpdatePlayerSplitTotal()
+        {
+            // reset for counting
+            _playerTotalSplit = 0;
+
+            for (int i = 0; i < _playerCardsSplit.Count; i++)
+            {
+                _playerTotalSplit += _playerCardsSplit[i].Value;
+            }
+        }
+
         public void UpdateDealerTotal()
         {
             // reset for counting

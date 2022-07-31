@@ -24,7 +24,12 @@ namespace Blackjack_with_Basic_Strategy_learner
         public Coins Coins { get; set; }
 
         private double[] _marginsPlayerCards = { 0, 10, 10, 0 };
+        private double[] _marginsPlayerSplitCards = { 0, 10, 10, 0 };
         Image _imageHiddenDealerCard = null;
+
+        // split vars
+        StackPanel SplitDeckPanel = null;
+        Label SplitDeckLabel = null;
 
         public BlackjackGame()
         {
@@ -55,12 +60,10 @@ namespace Blackjack_with_Basic_Strategy_learner
             BTNDeal.IsEnabled = !(Game._currentBet == 0);
         }
 
-        private void PlayerDrawCard()
+        private void PlayerDrawCard(bool toSplitDeck)
         {
             // draw a card from the deck
             Card temp = Game.DrawCard();
-
-            Game._playerCards.Add(temp);
 
             // create img for the card
             Image cardImg = new Image();
@@ -72,16 +75,34 @@ namespace Blackjack_with_Basic_Strategy_learner
             src.EndInit();
             cardImg.Source = src;
 
-            cardImg.Margin = new Thickness(_marginsPlayerCards[0], _marginsPlayerCards[1], _marginsPlayerCards[2], _marginsPlayerCards[3]);
-            ContainerPlayerCards.Children.Add(cardImg);
+            // split deck or not
+            if (toSplitDeck)
+            {
+                cardImg.Margin = new Thickness(_marginsPlayerSplitCards[0], _marginsPlayerSplitCards[1], _marginsPlayerSplitCards[2], _marginsPlayerSplitCards[3]);
+                SplitDeckPanel.Children.Add(cardImg);
 
-            // update player card total
-            Game.UpdateTotalsAndCheckForAce();
-            UpdatePlayerTotalLabel();
+                Game._playerCardsSplit.Add(temp);
+                // update player card total
+                Game.UpdateTotalsAndCheckForAce();
+                UpdatePlayerTotalSplitLabel();
 
-            // prepare margins for next img
-            _marginsPlayerCards[0] = -90;
-            _marginsPlayerCards[1] -= 30;
+                // prepare margins for next img
+                _marginsPlayerSplitCards[0] = -90;
+                _marginsPlayerSplitCards[1] -= 30;
+            } else
+            {
+                cardImg.Margin = new Thickness(_marginsPlayerCards[0], _marginsPlayerCards[1], _marginsPlayerCards[2], _marginsPlayerCards[3]);
+                ContainerPlayerCards.Children.Add(cardImg);
+
+                Game._playerCards.Add(temp);
+                // update player card total
+                Game.UpdateTotalsAndCheckForAce();
+                UpdatePlayerTotalLabel();
+
+                // prepare margins for next img
+                _marginsPlayerCards[0] = -90;
+                _marginsPlayerCards[1] -= 30;
+            }
         }
 
         private void DealerDrawCard(bool isHidden)
@@ -128,6 +149,10 @@ namespace Blackjack_with_Basic_Strategy_learner
         {
             LabelPlayerTotal.Content = Game._playerTotal;
         }
+        private void UpdatePlayerTotalSplitLabel()
+        {
+            SplitDeckLabel.Content = Game._playerTotalSplit;
+        }
 
         private void UpdateDealerTotalLabel()
         {
@@ -163,6 +188,13 @@ namespace Blackjack_with_Basic_Strategy_learner
             // clear the card containers
             ContainerPlayerCards.Children.Clear();
             ContainerDealerCards.Children.Clear();
+            ContainerSplitDeck.Children.Clear(); 
+
+            // reset split container
+            ColDefSplit.Width = new GridLength(0);
+
+            // change margin on first label
+            RectFirstDeck.Margin = new Thickness(270, 0, 270, 0);
 
             // reset the labels
             LabelDealerTotal.Content = "0";
@@ -177,13 +209,16 @@ namespace Blackjack_with_Basic_Strategy_learner
             _marginsPlayerCards[1] = 10;
             _marginsPlayerCards[2] = 10;
             _marginsPlayerCards[3] = 0;
+            _marginsPlayerSplitCards[0] = 0;
+            _marginsPlayerSplitCards[1] = 10;
+            _marginsPlayerSplitCards[2] = 10;
+            _marginsPlayerSplitCards[3] = 0;
 
             // reset the game
             Game.ResetGame();
 
             // reset the bet
             updateBet();
-
         }
 
         private void EndGame(bool blackjackPayout)
@@ -199,19 +234,29 @@ namespace Blackjack_with_Basic_Strategy_learner
                 DealerDrawCard(false);
             }
 
-            // get the result
-            string result = Game.PlayerHasWon();
+            if (Game._playerUsedSplit)
+            {
+                string resultSplit = Game.PlayerSplitHasWon();
+                string result = Game.PlayerHasWon();
 
-            if (blackjackPayout)
-            {
-                Coins.Amount += (Game._currentBet * 2.5);
-                MessageBox.Show("blackjack");
-            } else
-            {
+                // result split deck
+                switch (resultSplit)
+                {
+                    case "win":
+                        Coins.Amount += ((Game._currentBet/2) * 2);
+                        break;
+                    case "push":
+                        Coins.Amount += (Game._currentBet/2);
+                        break;
+                    default:
+                        break;
+                }
+
+                // result normal deck
                 switch (result)
                 {
                     case "win":
-                        Coins.Amount += (Game._currentBet*2);
+                        Coins.Amount += (Game._currentBet * 2);
                         break;
                     case "push":
                         Coins.Amount += Game._currentBet;
@@ -219,8 +264,34 @@ namespace Blackjack_with_Basic_Strategy_learner
                     default:
                         break;
                 }
-                
-                MessageBox.Show(result);
+
+                MessageBox.Show($"left: {result}, right: {resultSplit}");
+            } else
+            {
+                // get the result
+                string result = Game.PlayerHasWon();
+
+                if (blackjackPayout)
+                {
+                    Coins.Amount += (Game._currentBet * 2.5);
+                    MessageBox.Show("blackjack");
+                }
+                else
+                {
+                    switch (result)
+                    {
+                        case "win":
+                            Coins.Amount += (Game._currentBet * 2);
+                            break;
+                        case "push":
+                            Coins.Amount += Game._currentBet;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    MessageBox.Show(result);
+                }
             }
 
             Coins.SaveCoins();
@@ -233,31 +304,125 @@ namespace Blackjack_with_Basic_Strategy_learner
         // event methods
         private void BTNHit_Click(object sender, RoutedEventArgs e)
         {
-            PlayerDrawCard();
+            BTNSplit.IsEnabled = false;
+            BTNDouble.IsEnabled = false;
 
-            if(Game._playerTotal >= 21)
+            if (Game._playerUsedSplit)
+            {
+                if(Game._activeDeck == 0)
+                {
+                    PlayerDrawCard(true);
+
+                    if (Game._playerTotalSplit >= 21)
+                    {
+                        Game._activeDeck = 1;
+                    }
+                } else
+                {
+                    PlayerDrawCard(false);
+
+                    if (Game._playerTotal >= 21)
+                    {
+                        EndGame(false);
+                    }
+                }
+            } else
+            {
+                PlayerDrawCard(false);
+            
+                if (Game._playerTotal >= 21)
+                {
+                    EndGame(false);
+                }
+            }
+
+        }
+
+        private void BTNStand_Click(object sender, RoutedEventArgs e)
+        {
+            if (Game._playerUsedSplit && Game._activeDeck == 0)
+            {
+                Game._activeDeck = 1;
+            } else
             {
                 EndGame(false);
             }
         }
 
-        private void BTNStand_Click(object sender, RoutedEventArgs e)
-        {
-            EndGame(false);
-        }
-
         private void BTNDouble_Click(object sender, RoutedEventArgs e)
         {
+            // double the bet
+            Coins.Amount -= Game._currentBet;
             Game._currentBet *= 2;
             updateBet();
-            PlayerDrawCard();
+            UpdateCoins();
+
+            // draw a card
+            PlayerDrawCard(false);
+
+            // end this round
             EndGame(false);
         }
 
         private void BTNSplit_Click(object sender, RoutedEventArgs e)
         {
+            BTNDouble.IsEnabled = false;
+
+            // setup split container
             CreateDeck();
             ColDefSplit.Width = new GridLength(1, GridUnitType.Star);
+
+            // split the deck
+            Game.SplitDeck();
+
+            // create img for the split card
+            // draw a card from the deck
+            Card temp = Game._playerCardsSplit[0];
+
+            // create img for the card
+            Image cardImg = new Image();
+            cardImg.Width = 110;
+
+            BitmapImage src = new BitmapImage();
+            src.BeginInit();
+            src.UriSource = new Uri(temp.Path, UriKind.Relative);
+            src.EndInit();
+            cardImg.Source = src;
+
+            cardImg.Margin = new Thickness(_marginsPlayerSplitCards[0], _marginsPlayerSplitCards[1], _marginsPlayerSplitCards[2], _marginsPlayerSplitCards[3]);
+            SplitDeckPanel.Children.Add(cardImg);
+
+            UpdatePlayerTotalSplitLabel();
+            UpdatePlayerTotalLabel();
+
+            // prepare margins for next img
+            _marginsPlayerCards[1] += 30;
+            _marginsPlayerSplitCards[0] = -90;
+            _marginsPlayerSplitCards[1] -= 30;
+
+            // remove second img from first deck
+            ContainerPlayerCards.Children.RemoveAt(ContainerPlayerCards.Children.Count-1);
+
+            // draw 2 cards, 1 to each deck
+            PlayerDrawCard(true);
+            PlayerDrawCard(false);
+
+            // double the bet
+            Coins.Amount -= Game._currentBet;
+            Game._currentBet *= 2;
+            updateBet();
+            UpdateCoins();
+
+            // check for blackjacks
+            if (Game._playerTotalSplit == 21)
+            {
+                Game._activeDeck = 1;
+            }
+            
+            if (Game._playerTotalSplit == 21 && Game._playerTotal == 21)
+            {
+                EndGame(false);
+            }
         }
 
         private void BTNDeal_Click(object sender, RoutedEventArgs e)
@@ -282,7 +447,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             {
                 if( i == 0 || i == 2)
                 {
-                    PlayerDrawCard();
+                    PlayerDrawCard(false);
                 } else
                 {
                     DealerDrawCard(i == 3);
@@ -290,6 +455,20 @@ namespace Blackjack_with_Basic_Strategy_learner
             }
             // enable the action buttons
             ToggleActionButtons(true);
+
+            // toggle the apropriate buttons based on your cards
+            // if the cards are not equal, you cant split
+            if(Game._playerCards[0].Value != Game._playerCards[1].Value)
+            {
+                BTNSplit.IsEnabled = false;
+            }
+
+            // if the bet cant be doubled, then disable split and double
+            if(Game._currentBet > Coins.Amount)
+            {
+                BTNSplit.IsEnabled = false;
+                BTNDouble.IsEnabled = false;
+            }
 
             // does the player have blackjack after dealing
             if(Game._playerTotal == 21)
@@ -460,6 +639,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             splitDeckContainer.HorizontalAlignment = HorizontalAlignment.Center;
             splitDeckContainer.Margin = new Thickness(0, 20, 0, 0);
 
+            SplitDeckPanel = splitDeckContainer;
             ContainerSplitDeck.Children.Add(splitDeckContainer);
 
             // create grid for label
@@ -484,6 +664,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             labelSplitTotal.Foreground = Brushes.White;
             labelSplitTotal.Content = "0";
 
+            SplitDeckLabel = labelSplitTotal;
             labelGrid.Children.Add(labelSplitTotal);
 
             ContainerSplitDeck.Children.Add(labelGrid);
