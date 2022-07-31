@@ -24,6 +24,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         public Coins Coins { get; set; }
 
         private double[] _marginsPlayerCards = { 0, 10, 10, 0 };
+        Image _imageHiddenDealerCard = null;
 
         public BlackjackGame()
         {
@@ -34,6 +35,9 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             Game = new Blackjack(8);
             UpdateBTNDeal();
+
+            // disable action buttons
+            ToggleActionButtons(false);
         }
 
         private void UpdateCoins()
@@ -53,11 +57,12 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void PlayerDrawCard()
         {
-            // shared code
+            // draw a card from the deck
             Card temp = Game.DrawCard();
 
-            Game._playerTotal += temp.Value;
+            Game._playerCards.Add(temp);
 
+            // create img for the card
             Image cardImg = new Image();
             cardImg.Width = 110;
 
@@ -69,6 +74,9 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             cardImg.Margin = new Thickness(_marginsPlayerCards[0], _marginsPlayerCards[1], _marginsPlayerCards[2], _marginsPlayerCards[3]);
             ContainerPlayerCards.Children.Add(cardImg);
+
+            // update player card total
+            Game.UpdatePlayerTotal();
             UpdatePlayerTotalLabel();
 
             // prepare margins for next img
@@ -78,29 +86,42 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void DealerDrawCard(bool isHidden)
         {
-            // shared code
+            // draw a card from the decl
             Card temp = Game.DrawCard();
 
+            // create img
             Image cardImg = new Image();
             cardImg.Width = 110;
 
             BitmapImage src = new BitmapImage();
             src.BeginInit();
+
+            // check for if the card needs to be hidden
             if (isHidden)
             {
                 src.UriSource = new Uri(Game._hiddenCardPath, UriKind.Relative);
+                cardImg.Name = "ImageHiddenCard";
                 Game._hiddenDealerCard = temp;
             } else
             {
                 src.UriSource = new Uri(temp.Path, UriKind.Relative);
 
-                Game._dealerTotal += temp.Value;
+                Game._dealerCards.Add(temp);
             }
             src.EndInit();
             cardImg.Source = src;
 
-            UpdateDealerTotalLabel();
+            if (isHidden)
+            {
+                _imageHiddenDealerCard = cardImg;
+            }
+
             ContainerDealerCards.Children.Add(cardImg);
+
+
+            // update player card total
+            Game.UpdateDealerTotal();
+            UpdateDealerTotalLabel();
         }
 
         private void UpdatePlayerTotalLabel()
@@ -113,14 +134,93 @@ namespace Blackjack_with_Basic_Strategy_learner
             LabelDealerTotal.Content = Game._dealerTotal;
         }
 
+        // toggle methods for whether the buttons need to be disabled
+        private void ToggleActionButtons(bool enabled)
+        {
+            BTNHit.IsEnabled = enabled;
+            BTNStand.IsEnabled = enabled;
+            BTNSplit.IsEnabled = enabled;
+            BTNDouble.IsEnabled = enabled;
+        }
+
+        private void ToggleChipButtons(bool enabled)
+        {
+            BTNChip1.IsEnabled = enabled;
+            BTNChip5.IsEnabled = enabled;
+            BTNChip10.IsEnabled = enabled;
+            BTNChip25.IsEnabled = enabled;
+            BTNChip50.IsEnabled = enabled;
+            BTNChip100.IsEnabled = enabled;
+            BTNChip250.IsEnabled = enabled;
+            BTNChip500.IsEnabled = enabled;
+            BTNChip1000.IsEnabled = enabled;
+            BTNChip5000.IsEnabled = enabled;
+            BTNChip10000.IsEnabled = enabled;
+        }
+
+        private void ResetScreen()
+        {
+            // clear the card containers
+            ContainerPlayerCards.Children.Clear();
+            ContainerDealerCards.Children.Clear();
+
+            // reset the labels
+            LabelDealerTotal.Content = "0";
+            LabelPlayerTotal.Content = "0";
+
+            // toggle the buttons
+            ToggleActionButtons(false);
+            ToggleChipButtons(true);
+
+            // reset playercard margins
+            _marginsPlayerCards[0] = 0;
+            _marginsPlayerCards[1] = 10;
+            _marginsPlayerCards[2] = 10;
+            _marginsPlayerCards[3] = 0;
+
+            // reset the game
+            Game.ResetGame();
+
+            // reset the bet
+            updateBet();
+
+        }
+
+        private void EndGame()
+        {
+            // turn the hidden dealer card
+            Game.TurnHiddenCard();
+            UpdateDealerTotalLabel();
+            _imageHiddenDealerCard.Source = new BitmapImage(new Uri(Game._hiddenDealerCard.Path, UriKind.Relative));
+
+            // dealer takes cards until he he has 17 or higher
+            while (Game._dealerTotal < 17)
+            {
+                DealerDrawCard(false);
+            }
+
+            // get the result
+            string result = Game.PlayerHasWon();
+            MessageBox.Show(result);
+
+            // clear cards
+            ResetScreen();
+        }
+
+        // event methods
         private void BTNHit_Click(object sender, RoutedEventArgs e)
         {
+            PlayerDrawCard();
 
+            if(Game._playerTotal >= 21)
+            {
+                EndGame();
+            }
         }
 
         private void BTNStand_Click(object sender, RoutedEventArgs e)
         {
-
+            EndGame();
         }
 
         private void BTNDouble_Click(object sender, RoutedEventArgs e)
@@ -135,6 +235,12 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNDeal_Click(object sender, RoutedEventArgs e)
         {
+            // disable the chip buttons and deal button
+            ToggleChipButtons(false);
+            BTNDeal.IsEnabled = false;
+
+            Game._bettingAllowed = false;
+
             // here we start the game
             // deal cards to player and dealer
 
@@ -148,6 +254,15 @@ namespace Blackjack_with_Basic_Strategy_learner
                 {
                     DealerDrawCard(i == 3);
                 }
+            }
+            // enable the action buttons
+            ToggleActionButtons(true);
+
+            // does the player have blackjack after dealing
+            if(Game._playerTotal == 21)
+            {
+                MessageBox.Show("blackjack!");
+                EndGame();
             }
         }
 

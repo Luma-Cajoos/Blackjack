@@ -8,6 +8,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 {
     public class Blackjack
     {
+        // deck setup
         private const int _numberOfCardsInDeck = 52;
         public int DecksInPlay { get; set; }
 
@@ -15,6 +16,9 @@ namespace Blackjack_with_Basic_Strategy_learner
         public int CardsDrawn { get; set; }
 
         // card value totals
+        public List<Card> _playerCards = new List<Card>();
+        public List<Card> _dealerCards = new List<Card>();
+
         public int _playerTotal = 0;
         public int _dealerTotal = 0;
 
@@ -25,7 +29,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         // betting vars
         public double _currentBet = 0;
 
-        private bool _bettingAllowed = true;
+        public bool _bettingAllowed = true;
 
         public Blackjack(int decksInPlay)
         {
@@ -77,6 +81,42 @@ namespace Blackjack_with_Basic_Strategy_learner
             return returnedCard;
         }
 
+        public void TurnHiddenCard()
+        {
+            _dealerCards.Add(_hiddenDealerCard);
+            UpdateDealerTotal();
+        }
+
+        public string PlayerHasWon()
+        {
+            string win = "win";
+            string loss = "loss";
+            string equal = "push";
+
+            if(_playerTotal <= 21 && _dealerTotal > 21)
+            {
+                return win;
+            } else if (_playerTotal <= 21 && _dealerTotal < _playerTotal)
+            {
+                return win;
+            } else if(_playerTotal == _dealerTotal)
+            {
+                return equal;
+            }
+
+            return loss;
+        }
+
+        public void ResetGame()
+        {
+            _dealerCards.Clear();
+            _playerCards.Clear();
+            _currentBet = 0;
+            _dealerTotal = 0;
+            _playerTotal = 0;
+            _bettingAllowed = true;
+        }
+
         // betting methods
         public void IncreaseBet(double amount, double balance)
         {
@@ -103,6 +143,29 @@ namespace Blackjack_with_Basic_Strategy_learner
                 }
 
                 _currentBet -= amount;
+            }
+        }
+
+        // card totals methods
+        public void UpdatePlayerTotal()
+        {
+            // reset for counting
+            _playerTotal = 0;
+
+            for (int i = 0; i < _playerCards.Count; i++)
+            {
+                _playerTotal += _playerCards[i].Value;
+            }
+        }
+        
+        public void UpdateDealerTotal()
+        {
+            // reset for counting
+            _dealerTotal = 0;
+
+            for (int i = 0; i < _dealerCards.Count; i++)
+            {
+                _dealerTotal += _dealerCards[i].Value;
             }
         }
     }
