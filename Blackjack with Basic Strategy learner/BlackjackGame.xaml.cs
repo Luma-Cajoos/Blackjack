@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -43,6 +44,9 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             // disable action buttons
             ToggleActionButtons(false);
+
+            // update cards left label
+            UpdateLabelCardsLeft();
         }
 
         private void UpdateCoins()
@@ -58,6 +62,11 @@ namespace Blackjack_with_Basic_Strategy_learner
         private void UpdateBTNDeal()
         {
             BTNDeal.IsEnabled = !(Game._currentBet == 0);
+        }
+
+        private void UpdateLabelCardsLeft()
+        {
+            LabelCardsLeft.Text = $"Cards left in the shoe: {Game._cards.Length - Game.CardsDrawn}";
         }
 
         private void PlayerDrawCard(bool toSplitDeck)
@@ -102,6 +111,9 @@ namespace Blackjack_with_Basic_Strategy_learner
                 // prepare margins for next img
                 _marginsPlayerCards[0] = -90;
                 _marginsPlayerCards[1] -= 30;
+
+                // update the cards left label
+                UpdateLabelCardsLeft();
             }
         }
 
@@ -143,6 +155,9 @@ namespace Blackjack_with_Basic_Strategy_learner
             // update player card total
             Game.UpdateTotalsAndCheckForAce();
             UpdateDealerTotalLabel();
+
+            // update the cards left label
+            UpdateLabelCardsLeft();
         }
 
         private void UpdatePlayerTotalLabel()
@@ -265,7 +280,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                         break;
                 }
 
-                MessageBox.Show($"left: {result}, right: {resultSplit}");
+                LabelResult.Text = $"Your last round was a {result} in the left deck and a {resultSplit} in the right deck";
             } else
             {
                 // get the result
@@ -290,7 +305,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                             break;
                     }
 
-                    MessageBox.Show(result);
+                    LabelResult.Text = $"Your last round was a {result}";
                 }
             }
 
@@ -299,6 +314,18 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             // clear cards
             ResetScreen();
+
+            // check if shuffle is needed
+            int cardsLeft = Game._cards.Length - Game.CardsDrawn;
+
+            if(cardsLeft <= Game.ShuffleAtCards)
+            {
+                Game.CardsDrawn = 0;
+                Game.ShuffleDeck();
+
+                MessageBox.Show("deck shuffled");
+
+            }
         }
 
         // event methods
@@ -438,7 +465,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             Coins.Amount -= Game._currentBet;
             Coins.SaveCoins();
             UpdateCoins();
-            
+
 
             // here we start the game
             // deal cards to player and dealer
@@ -446,14 +473,16 @@ namespace Blackjack_with_Basic_Strategy_learner
             // deal 4 cards in this order: player, dealer, player and a back card to dealer
             for (int i = 0; i < 4; i++)
             {
-                if( i == 0 || i == 2)
+                if (i == 0 || i == 2)
                 {
                     PlayerDrawCard(false);
-                } else
+                }
+                else
                 {
                     DealerDrawCard(i == 3);
                 }
             }
+
             // enable the action buttons
             ToggleActionButtons(true);
 

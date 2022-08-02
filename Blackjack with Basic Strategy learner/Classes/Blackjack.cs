@@ -37,6 +37,10 @@ namespace Blackjack_with_Basic_Strategy_learner
         public bool _playerUsedSplit = false;
         public int _activeDeck = 0;
 
+        // when to shuffle deck again
+        public const int _shuffleAtPercent = 20;
+        public int ShuffleAtCards { get; set; }
+
         public Blackjack(int decksInPlay)
         {
             DecksInPlay = decksInPlay;
@@ -47,6 +51,8 @@ namespace Blackjack_with_Basic_Strategy_learner
             CreateDecks();
             ShuffleDeck();
             CardsDrawn = 0;
+
+            ShuffleAtCards = _cards.Length * _shuffleAtPercent / 100;
         }
 
         public void CreateDecks()
