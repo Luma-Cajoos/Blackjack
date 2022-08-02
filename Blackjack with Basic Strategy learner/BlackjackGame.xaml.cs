@@ -216,7 +216,6 @@ namespace Blackjack_with_Basic_Strategy_learner
             LabelPlayerTotal.Content = "0";
 
             // toggle the buttons
-            ToggleActionButtons(false);
             ToggleChipButtons(true);
 
             // reset playercard margins
@@ -236,17 +235,19 @@ namespace Blackjack_with_Basic_Strategy_learner
             updateBet();
         }
 
-        private void EndGame(bool blackjackPayout)
+        private async void EndGame(bool blackjackPayout)
         {
             // turn the hidden dealer card
             Game.TurnHiddenCard();
             UpdateDealerTotalLabel();
             _imageHiddenDealerCard.Source = new BitmapImage(new Uri(Game._hiddenDealerCard.Path, UriKind.Relative));
+            await Task.Delay(500);
 
             // dealer takes cards until he he has 17 or higher
             while (Game._dealerTotal < 17)
             {
                 DealerDrawCard(false);
+                await Task.Delay(500);
             }
 
             if (Game._playerUsedSplit)
@@ -311,6 +312,10 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             Coins.SaveCoins();
             UpdateCoins();
+            // disable the action buttons before the delay
+            ToggleActionButtons(false);
+            // delay after each round
+            await Task.Delay(2000);
 
             // clear cards
             ResetScreen();
@@ -453,7 +458,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             }
         }
 
-        private void BTNDeal_Click(object sender, RoutedEventArgs e)
+        private async void BTNDeal_Click(object sender, RoutedEventArgs e)
         {
             // disable the chip buttons and deal button
             ToggleChipButtons(false);
@@ -476,10 +481,12 @@ namespace Blackjack_with_Basic_Strategy_learner
                 if (i == 0 || i == 2)
                 {
                     PlayerDrawCard(false);
+                    await Task.Delay(500);
                 }
                 else
                 {
                     DealerDrawCard(i == 3);
+                    await Task.Delay(500);
                 }
             }
 
