@@ -41,6 +41,10 @@ namespace Blackjack_with_Basic_Strategy_learner
         public const int _shuffleAtPercent = 20;
         public int ShuffleAtCards { get; set; }
 
+        // insurance
+        public double Insurance { get; set; } = 0;
+        public bool PlayerChoseInsurance { get; set; } = false;
+
         public Blackjack(int decksInPlay)
         {
             DecksInPlay = decksInPlay;
@@ -167,6 +171,8 @@ namespace Blackjack_with_Basic_Strategy_learner
             _bettingAllowed = true;
             _playerUsedSplit = false;
             _activeDeck = 0;
+            Insurance = 0;
+            PlayerChoseInsurance = false;
         }
 
         public void UpdateTotalsAndCheckForAce()

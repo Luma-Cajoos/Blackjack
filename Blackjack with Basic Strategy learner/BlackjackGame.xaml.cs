@@ -282,7 +282,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                 }
 
                 LabelResult.Text = $"Your last round was a {result} in the left deck and a {resultSplit} in the right deck";
-            } else
+            } else if(!Game.PlayerChoseInsurance)
             {
                 // get the result
                 string result = Game.PlayerHasWon();
@@ -490,27 +490,65 @@ namespace Blackjack_with_Basic_Strategy_learner
                 }
             }
 
-            // enable the action buttons
-            ToggleActionButtons(true);
-
-            // toggle the apropriate buttons based on your cards
-            // if the cards are not equal, you cant split
-            if(Game._playerCards[0].Value != Game._playerCards[1].Value)
-            {
-                BTNSplit.IsEnabled = false;
-            }
-
-            // if the bet cant be doubled, then disable split and double
-            if(Game._currentBet > Coins.Amount)
-            {
-                BTNSplit.IsEnabled = false;
-                BTNDouble.IsEnabled = false;
-            }
-
             // does the player have blackjack after dealing
             if(Game._playerTotal == 21)
             {
                 EndGame(true);
+                return;
+            }
+
+            // insurance
+            if (Game._dealerCards[0].IsAce)
+            {
+                // can the player afford insurance
+                if (Game._currentBet / 2 <= Coins.Amount)
+                {
+                    // ask for insurance
+                    if (MessageBox.Show("Do you want insurance", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        // add insurance
+                        // add half the bet
+                        Game.Insurance = Game._currentBet / 2;
+                        Coins.Amount -= Game.Insurance;
+                        Game.PlayerChoseInsurance = true;
+
+                        Coins.SaveCoins();
+                        UpdateCoins();
+                    }
+                }
+
+                await Task.Delay(3000);
+
+                // check for hidden 10
+                if(Game._hiddenDealerCard.Value == 10)
+                {
+                    // did the player chose insurance
+                    if (Game.PlayerChoseInsurance)
+                    {
+                        // pay the insurance back
+                        Coins.Amount += (Game._currentBet + Game.Insurance);
+                        
+                    }
+
+                    EndGame(false);
+                }
+
+                // enable the action buttons
+                ToggleActionButtons(true);
+
+                // toggle the apropriate buttons based on your cards
+                // if the cards are not equal, you cant split
+                if (Game._playerCards[0].Value != Game._playerCards[1].Value)
+                {
+                    BTNSplit.IsEnabled = false;
+                }
+
+                // if the bet cant be doubled, then disable split and double
+                if (Game._currentBet > Coins.Amount)
+                {
+                    BTNSplit.IsEnabled = false;
+                    BTNDouble.IsEnabled = false;
+                }
             }
         }
 
