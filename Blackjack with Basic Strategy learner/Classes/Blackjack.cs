@@ -127,7 +127,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             {
                 return win;
             }
-            else if (_playerTotal == _dealerTotal)
+            else if (_playerTotal == _dealerTotal && _playerTotal <= 21)
             {
                 return equal;
             }
@@ -148,7 +148,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             {
                 return win;
             }
-            else if (_playerTotalSplit == _dealerTotal)
+            else if (_playerTotalSplit == _dealerTotal && _playerTotal <= 21)
             {
                 return equal;
             }
