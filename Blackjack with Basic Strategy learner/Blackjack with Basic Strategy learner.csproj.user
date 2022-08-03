@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="BasicStrategyTrainer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="BlackjackGame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +33,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="BasicStrategyTrainer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="BlackjackGame.xaml">
       <SubType>Designer</SubType>
     </Page>

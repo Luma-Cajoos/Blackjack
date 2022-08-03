@@ -22,7 +22,6 @@ namespace Blackjack_with_Basic_Strategy_learner
     public partial class StartingMenu : Page
     {
         public Coins Coins { get; set; }
-        const string filepath = "./Data/coins.txt";
 
         public StartingMenu()
         {
@@ -31,10 +30,6 @@ namespace Blackjack_with_Basic_Strategy_learner
             Coins = new Coins();
             CheckResetBTN();
             UpdateCoins();
-        }
-        private void SaveCoinsToFile()
-        {
-            File.WriteAllText(filepath, Coins.ToString());
         }
         private void CheckResetBTN()
         {
@@ -60,7 +55,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNLearn_Click(object sender, RoutedEventArgs e)
         {
-            
+            App.ParentWindowRef.ParentFrame.Navigate(new BasicStrategyTrainer());
         }
 
         private void BTNHowToPlay_Click(object sender, RoutedEventArgs e)

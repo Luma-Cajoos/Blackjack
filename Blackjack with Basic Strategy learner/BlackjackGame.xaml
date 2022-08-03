@@ -29,8 +29,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition MinHeight="300"></RowDefinition>
+                <RowDefinition MinHeight="300"></RowDefinition>
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="1" Grid.Row="0">
                 <Grid>

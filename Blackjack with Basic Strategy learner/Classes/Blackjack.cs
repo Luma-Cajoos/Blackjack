@@ -45,6 +45,9 @@ namespace Blackjack_with_Basic_Strategy_learner
         public double Insurance { get; set; } = 0;
         public bool PlayerChoseInsurance { get; set; } = false;
 
+        // basic strategy trainer vars
+        public string _actionChoice;
+
         public Blackjack(int decksInPlay)
         {
             DecksInPlay = decksInPlay;
@@ -290,6 +293,81 @@ namespace Blackjack_with_Basic_Strategy_learner
             {
                 _dealerTotal += _dealerCards[i].Value;
             }
+        }
+
+        // basic strategy trainer methods
+        public bool ResultBasicStrategy()
+        {
+            string correctChoice = "";
+
+            // check for hard totals
+            switch (_playerTotal)
+            {
+                case <= 8:
+                    correctChoice = "hit";
+                    break;
+                case 9:
+                    if (_dealerTotal == 2)
+                    {
+                        correctChoice = "hit";
+                    }
+                    else if (_dealerTotal <= 6)
+                    {
+                        correctChoice = "double";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case 10:
+                    if (_dealerTotal <= 9)
+                    {
+                        correctChoice = "double";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case 11:
+                    correctChoice = "double";
+                    break;
+                case 12:
+                    if (_dealerTotal <= 3)
+                    {
+                        correctChoice = "hit";
+                    } 
+                    else if (_dealerTotal <= 6)
+                    {
+                        correctChoice = "stand";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                    if(_dealerTotal <= 6)
+                    {
+                        correctChoice = "stand";
+                    } else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case >= 17:
+                    correctChoice = "stand";
+                    break;
+                default:
+                    break;
+            }
+
+
+            return correctChoice == _actionChoice;
         }
     }
 }

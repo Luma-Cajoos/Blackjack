@@ -306,3 +306,5 @@ C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\o
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.g.cs
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.baml
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrow_back.png
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BasicStrategyTrainer.g.cs
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BasicStrategyTrainer.baml

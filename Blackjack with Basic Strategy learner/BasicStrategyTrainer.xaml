@@ -1,0 +1,98 @@
+﻿<Page x:Class="Blackjack_with_Basic_Strategy_learner.BasicStrategyTrainer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Blackjack_with_Basic_Strategy_learner"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="BasicStrategyTrainer">
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
+        </StackPanel.Background>
+        <Grid Margin="0 0 0 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="BTN_return" Click="BTN_return_Click" Style="{DynamicResource ButtonTransparent}">
+                <Image Source="/Images/arrow_back.png" Width="100"></Image>
+            </Button>
+            <TextBlock Grid.Column="1" Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Basic Strategy Training</TextBlock>
+        </Grid>
+        <Grid Margin="10 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="300"></RowDefinition>
+                <RowDefinition MinHeight="300"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Grid>
+                    <Rectangle Fill="#000" Opacity=".5" Margin="200 0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">Dealer</Label>
+                </Grid>
+                <StackPanel Name="ContainerDealerCards" Orientation="Horizontal" HorizontalAlignment="Center">
+                </StackPanel>
+                <Grid Margin="0 10 0 0">
+                    <Rectangle Fill="#000" Opacity=".5" Margin="270 0">
+                        <Rectangle.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Rectangle.Resources>
+                    </Rectangle>
+                    <Label Name="LabelDealerTotal" HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">0</Label>
+                </Grid>
+            </StackPanel>
+            <Grid Grid.Column="1" Grid.Row="1" Margin="0 70 0 0" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Name="ColDefSplit" Width="0"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <StackPanel Name="ContainerPlayerCards" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                    </StackPanel>
+                    <Grid Margin="0 10 0 0">
+                        <Rectangle Name="RectFirstDeck" Fill="#000" Opacity=".5" Margin="270 0"></Rectangle>
+                        <Label Name="LabelPlayerTotal" HorizontalAlignment="Center" Padding="0 10" FontSize="20" Foreground="#fff">0</Label>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Name="ContainerSplitDeck">
+
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Column="2" Grid.Row="0">
+                <TextBlock Name="LabelCardsLeft" Style="{DynamicResource MainText}" Margin="0 0 0 20">Cards left in the shoe: counting...</TextBlock>
+                <TextBlock Name="LabelResult" Style="{DynamicResource MainText}" FontWeight="Bold"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 0 5 5" Padding="10" Grid.Column="0" Grid.Row="0" Name="BTNHit" Click="BTNHit_Click">HIT</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 0 0 5" Padding="10" Grid.Column="1" Grid.Row="0" Name="BTNStand" Click="BTNStand_Click">STAND</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="0 5 5 0" Padding="10" Grid.Column="0" Grid.Row="1" Name="BTNDouble" Click="BTNDouble_Click">DOUBLE</Button>
+                    <Button Style="{StaticResource ButtonStyleYellow}" Margin="5 5 0 0" Padding="10" Grid.Column="1" Grid.Row="1" Name="BTNSplit" Click="BTNSplit_Click">SPLIT</Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Page>
