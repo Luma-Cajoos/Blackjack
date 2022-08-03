@@ -396,7 +396,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             EndGame(false);
         }
 
-        private void BTNSplit_Click(object sender, RoutedEventArgs e)
+        private async void BTNSplit_Click(object sender, RoutedEventArgs e)
         {
             BTNDouble.IsEnabled = false;
             BTNSplit.IsEnabled = false;
@@ -437,7 +437,9 @@ namespace Blackjack_with_Basic_Strategy_learner
             ContainerPlayerCards.Children.RemoveAt(ContainerPlayerCards.Children.Count-1);
 
             // draw 2 cards, 1 to each deck
+            await Task.Delay(500);
             PlayerDrawCard(true);
+            await Task.Delay(500);
             PlayerDrawCard(false);
 
             // double the bet
