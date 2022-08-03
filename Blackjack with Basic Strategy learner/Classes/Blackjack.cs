@@ -308,11 +308,34 @@ namespace Blackjack_with_Basic_Strategy_learner
                 if (isSplit)
                 {
                     correctChoice = "split";
-                } else
+                }
+                else if (_playerCards.Count == 2 && _playerCards[0].IsAce || _playerCards[1].IsAce)
+                {
+                    if (_playerCards[0].IsAce)
+                    {
+                        correctChoice = SoftTotalResult(_playerCards[1]);
+                    }
+                    else
+                    {
+                        correctChoice = SoftTotalResult(_playerCards[0]);
+                    }
+                }
+                else
                 {
                     correctChoice = HardTotalResult();
                 }
-            } else
+            } 
+            else if (_playerCards.Count == 2 && _playerCards[0].IsAce || _playerCards[1].IsAce)
+            {
+                if (_playerCards[0].IsAce)
+                {
+                    correctChoice = SoftTotalResult(_playerCards[1]);
+                } else
+                {
+                    correctChoice = SoftTotalResult(_playerCards[0]);
+                }
+            }
+            else
             {
                 correctChoice = HardTotalResult();
             }
@@ -396,6 +419,96 @@ namespace Blackjack_with_Basic_Strategy_learner
             return correctChoice;
         }
 
+        private string SoftTotalResult(Card card)
+        {
+            string correctChoice = "";
+
+            // check for soft totals
+            switch (card.Value)
+            {
+                case 9:
+                    correctChoice = "stand";
+                    break;
+                case 8:
+                    if (_dealerTotal <= 5)
+                    {
+                        correctChoice = "stand";
+                    }
+                    else if (_dealerTotal == 6)
+                    {
+                        correctChoice = "double";
+                    }
+                    else
+                    {
+                        correctChoice = "stand";
+                    }
+                    break;
+                case 7:
+                    if (_dealerTotal <= 6)
+                    {
+                        correctChoice = "double";
+                    }
+                    else if (_dealerTotal <= 8)
+                    {
+                        correctChoice = "stand";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case 6:
+                    if (_dealerTotal == 2)
+                    {
+                        correctChoice = "hit";
+                    }
+                    else if (_dealerTotal <= 6)
+                    {
+                        correctChoice = "double";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case 5:
+                case 4:
+                    if (_dealerTotal <= 3)
+                    {
+                        correctChoice = "hit";
+                    }
+                    else if (_dealerTotal <= 6)
+                    {
+                        correctChoice = "double";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                case 3:
+                case 2:
+                    if (_dealerTotal <= 4)
+                    {
+                        correctChoice = "hit";
+                    }
+                    else if (_dealerTotal <= 6)
+                    {
+                        correctChoice = "double";
+                    }
+                    else
+                    {
+                        correctChoice = "hit";
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+
+            return correctChoice;
+        }
+        
         private bool PairSplittingResult()
         {
             bool isSplit = false;
