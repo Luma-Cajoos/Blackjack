@@ -32,14 +32,14 @@ namespace Blackjack_with_Basic_Strategy_learner
         StackPanel SplitDeckPanel = null;
         Label SplitDeckLabel = null;
 
-        public BlackjackGame()
+        public BlackjackGame(int decksInPlay)
         {
             InitializeComponent();
 
             Coins = new Coins();
             UpdateCoins();
 
-            Game = new Blackjack(8);
+            Game = new Blackjack(decksInPlay);
             UpdateBTNDeal();
 
             // disable action buttons

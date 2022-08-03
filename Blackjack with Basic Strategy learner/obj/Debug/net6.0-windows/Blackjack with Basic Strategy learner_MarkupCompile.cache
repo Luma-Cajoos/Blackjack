@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\App.xaml
-7-78931052
+8-1668765080
 691912178352
-14871385296
+151611910679
 1941905061893
-BlackjackGame.xaml;HiLoChoice.xaml;HiLoTrainerCard.xaml;HiLoTrainerCardReset.xaml;HowToPlay.xaml;MainWindow.xaml;StartingMenu.xaml;
+BlackjackGame.xaml;BlackjackGameSettings.xaml;HiLoChoice.xaml;HiLoTrainerCard.xaml;HiLoTrainerCardReset.xaml;HowToPlay.xaml;MainWindow.xaml;StartingMenu.xaml;
 
 False
 

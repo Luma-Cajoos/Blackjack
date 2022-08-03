@@ -304,3 +304,5 @@ A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCardReset.baml
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCardReset.g.cs
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCardReset.baml
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.g.cs
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.baml

@@ -55,7 +55,7 @@ namespace Blackjack_with_Basic_Strategy_learner
 
         private void BTNPlay_Click(object sender, RoutedEventArgs e)
         {
-            App.ParentWindowRef.ParentFrame.Navigate(new BlackjackGame());
+            App.ParentWindowRef.ParentFrame.Navigate(new BlackjackGameSettings());
         }
 
         private void BTNLearn_Click(object sender, RoutedEventArgs e)
