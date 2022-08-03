@@ -12,10 +12,18 @@
             <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
         </StackPanel.Background>
         <Grid Margin="0 50 0 70">
-            <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Blackjack Settings</TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="BTN_return" Click="BTN_return_Click" Style="{DynamicResource ButtonTransparent}">
+                <Image Source="/Images/arrow_back.png" Width="100"></Image>
+            </Button>
+            <TextBlock Grid.Column="1" Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Blackjack Settings</TextBlock>
         </Grid>
         <StackPanel Margin="30  0 30 30">
-            <TextBlock Style="{DynamicResource MainText}">How many decks do you want to play with?</TextBlock>
+            <TextBlock Style="{DynamicResource MainText}" Margin="0 0 0 10">How many decks do you want to play with?</TextBlock>
             <StackPanel Orientation="Horizontal">
                 <Button Name="BTN_2decks" Margin="0 0 20 0" Click="BTN_2decks_Click" Style="{DynamicResource ButtonTransparent}">
                     <Image Source="/Images/GameAssets/cards/2_of_hearts.png" Width="150"></Image>

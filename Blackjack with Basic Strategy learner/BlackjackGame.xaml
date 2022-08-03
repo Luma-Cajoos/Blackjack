@@ -12,7 +12,15 @@
             <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
         </StackPanel.Background>
         <Grid Margin="0 0 0 10">
-            <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Blackjack</TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="BTN_return" Click="BTN_return_Click" Style="{DynamicResource ButtonTransparent}">
+                <Image Source="/Images/arrow_back.png" Width="100"></Image>
+            </Button>
+            <TextBlock Grid.Column="1" Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Blackjack</TextBlock>
         </Grid>
         <Grid Margin="10 0">
             <Grid.ColumnDefinitions>

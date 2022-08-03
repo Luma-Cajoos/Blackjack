@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/coins.txt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/arrowreturn.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/arrow_back.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgroundhowtoplay.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/coin.png")]

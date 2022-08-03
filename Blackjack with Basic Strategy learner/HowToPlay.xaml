@@ -12,7 +12,15 @@
             <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
         </StackPanel.Background>
         <Grid Margin="30 20 0 20">
-            <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">How to play ...?</TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="BTN_return" Click="BTN_return_Click" Style="{DynamicResource ButtonTransparent}">
+                <Image Source="/Images/arrow_back.png" Width="100"></Image>
+            </Button>
+            <TextBlock Grid.Column="1" Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">How to play ...?</TextBlock>
         </Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Height="600">
             <StackPanel >

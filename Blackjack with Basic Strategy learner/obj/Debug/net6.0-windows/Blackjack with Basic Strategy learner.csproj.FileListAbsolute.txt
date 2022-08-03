@@ -195,7 +195,6 @@ C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\o
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Blackjack with Basic Strategy learner.genruntimeconfig.cache
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\ref\Blackjack with Basic Strategy learner.dll
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Data\coins.txt
-A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrowreturn.png
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\background.png
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\backgroundHowToPlay.png
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\coin.png
@@ -306,3 +305,4 @@ C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\o
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerCardReset.baml
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.g.cs
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.baml
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrow_back.png

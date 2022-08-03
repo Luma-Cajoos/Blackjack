@@ -25,7 +25,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             InitializeComponent();
         }
 
-        private void BTNReturn_Click(object sender, RoutedEventArgs e)
+        private void BTN_return_Click(object sender, RoutedEventArgs e)
         {
             App.ParentWindowRef.ParentFrame.Navigate(new StartingMenu());
         }

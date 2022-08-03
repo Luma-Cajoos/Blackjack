@@ -9,11 +9,18 @@
       Title="HiLoChoice">
     <StackPanel>
         <StackPanel.Background>
-            <ImageBrush ImageSource="/Images/background.png"></ImageBrush>
+            <ImageBrush ImageSource="/Images/backgroundHowToPlay.png"></ImageBrush>
         </StackPanel.Background>
         <Grid Margin="0 50 0 70">
-            <Rectangle Fill="#000" Opacity=".5"></Rectangle>
-            <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">What mode do you want to play?</TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="BTN_return" Click="BTN_return_Click" Style="{DynamicResource ButtonTransparent}">
+                <Image Source="/Images/arrow_back.png" Width="100"></Image>
+            </Button>
+            <TextBlock Grid.Column="1" Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">What mode do you want to play?</TextBlock>
         </Grid>
         <StackPanel Margin="400 0 400 50">
             <Button Name="BTNCard" Click="BTNCard_Click" Style="{DynamicResource ButtonStyleYellow}" Margin="0 0 0 50" Padding="20" FontSize="24">

@@ -532,23 +532,23 @@ namespace Blackjack_with_Basic_Strategy_learner
 
                     EndGame(false);
                 }
+            }
+            
+            // enable the action buttons
+            ToggleActionButtons(true);
 
-                // enable the action buttons
-                ToggleActionButtons(true);
+            // toggle the apropriate buttons based on your cards
+            // if the cards are not equal, you cant split
+            if (Game._playerCards[0].Value != Game._playerCards[1].Value)
+            {
+                BTNSplit.IsEnabled = false;
+            }
 
-                // toggle the apropriate buttons based on your cards
-                // if the cards are not equal, you cant split
-                if (Game._playerCards[0].Value != Game._playerCards[1].Value)
-                {
-                    BTNSplit.IsEnabled = false;
-                }
-
-                // if the bet cant be doubled, then disable split and double
-                if (Game._currentBet > Coins.Amount)
-                {
-                    BTNSplit.IsEnabled = false;
-                    BTNDouble.IsEnabled = false;
-                }
+            // if the bet cant be doubled, then disable split and double
+            if (Game._currentBet > Coins.Amount)
+            {
+                BTNSplit.IsEnabled = false;
+                BTNDouble.IsEnabled = false;
             }
         }
 
@@ -704,6 +704,11 @@ namespace Blackjack_with_Basic_Strategy_learner
             Game.DecreaseBet(10000);
             updateBet();
             UpdateBTNDeal();
+        }
+
+        private void BTN_return_Click(object sender, RoutedEventArgs e)
+        {
+            App.ParentWindowRef.ParentFrame.Navigate(new BlackjackGameSettings());
         }
 
         private void CreateDeck()
