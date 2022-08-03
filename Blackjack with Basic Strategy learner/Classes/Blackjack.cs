@@ -300,6 +300,31 @@ namespace Blackjack_with_Basic_Strategy_learner
         {
             string correctChoice = "";
 
+            // check for splitting
+            if(_playerCards.Count == 2 && (_playerCards[0].Value == _playerCards[1].Value))
+            {
+                bool isSplit = PairSplittingResult();
+
+                if (isSplit)
+                {
+                    correctChoice = "split";
+                } else
+                {
+                    correctChoice = HardTotalResult();
+                }
+            } else
+            {
+                correctChoice = HardTotalResult();
+            }
+            
+
+            return correctChoice == _actionChoice;
+        }
+
+        private string HardTotalResult()
+        {
+            string correctChoice = "";
+
             // check for hard totals
             switch (_playerTotal)
             {
@@ -337,7 +362,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                     if (_dealerTotal <= 3)
                     {
                         correctChoice = "hit";
-                    } 
+                    }
                     else if (_dealerTotal <= 6)
                     {
                         correctChoice = "stand";
@@ -351,10 +376,11 @@ namespace Blackjack_with_Basic_Strategy_learner
                 case 14:
                 case 15:
                 case 16:
-                    if(_dealerTotal <= 6)
+                    if (_dealerTotal <= 6)
                     {
                         correctChoice = "stand";
-                    } else
+                    }
+                    else
                     {
                         correctChoice = "hit";
                     }
@@ -367,7 +393,97 @@ namespace Blackjack_with_Basic_Strategy_learner
             }
 
 
-            return correctChoice == _actionChoice;
+            return correctChoice;
+        }
+
+        private bool PairSplittingResult()
+        {
+            bool isSplit = false;
+
+            // check for splitting
+            switch (_playerCards[0].Value)
+            {
+                case 2:
+                case 3:
+                    if (_dealerTotal <= 7)
+                    {
+                        isSplit = true;
+                    }
+                    else
+                    {
+                        isSplit = false;
+                    }
+                    break;
+                case 4:
+                    if (_dealerTotal <= 4)
+                    {
+                        isSplit = false;
+                    }
+                    else if (_dealerTotal <= 6)
+                    {
+                        isSplit = true;
+                    }
+                    else
+                    {
+                        isSplit = false;
+                    }
+                    break;
+                case 5:
+                    isSplit = false;
+                    break;
+                case 6:
+                    if (_dealerTotal <= 6)
+                    {
+                        isSplit = true;
+                    }
+                    else
+                    {
+                        isSplit = false;
+                    }
+                    break;
+                case 7:
+                    if (_dealerTotal <= 7)
+                    {
+                        isSplit = true;
+                    }
+                    else
+                    {
+                        isSplit = false;
+                    }
+                    break;
+                case 8:
+                    isSplit = true;
+                    break;
+                case 9:
+                    if (_dealerTotal <= 6)
+                    {
+                        isSplit = true;
+                    }
+                    else if (_dealerTotal == 7)
+                    {
+                        isSplit = false;
+                    }
+                    else if (_dealerTotal <= 9)
+                    {
+                        isSplit = true;
+                    }
+                    else
+                    {
+                        isSplit = false;
+                    }
+                    break;
+                case 10:
+                    isSplit = false;
+                    break;
+                case >= 11:
+                    isSplit = true;
+                    break;
+                default:
+                    break;
+            }
+
+
+            return isSplit;
         }
     }
 }
