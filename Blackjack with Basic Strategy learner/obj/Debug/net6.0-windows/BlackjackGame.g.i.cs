@@ -277,7 +277,7 @@ namespace Blackjack_with_Basic_Strategy_learner {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Blackjack with Basic Strategy learner;component/blackjackgame.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Blackjack with Basic Strategy learner;V1.0.0.0;component/blackjackgame.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\BlackjackGame.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
