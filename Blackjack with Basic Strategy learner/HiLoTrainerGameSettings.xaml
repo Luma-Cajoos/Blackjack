@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Name="BTN_return" Click="BTN_return_Click" Style="{DynamicResource ButtonTransparent}">
+            <Button Name="BTN_return" Style="{DynamicResource ButtonTransparent}">
                 <Image Source="/Images/arrow_back.png" Width="100"></Image>
             </Button>
             <TextBlock Grid.Column="1" Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Hi-Lo Game Settings</TextBlock>
@@ -25,16 +25,16 @@
         <StackPanel Margin="30  0 30 30">
             <TextBlock Style="{DynamicResource MainText}" Margin="0 0 0 10">How many decks do you want to play with?</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <Button Name="BTN_2decks" Margin="0 0 20 0" Click="BTN_2decks_Click" Style="{DynamicResource ButtonTransparent}">
+                <Button Name="BTN_2decks" Margin="0 0 20 0" Style="{DynamicResource ButtonTransparent}">
                     <Image Source="/Images/GameAssets/cards/2_of_hearts.png" Width="150"></Image>
                 </Button>
-                <Button Name="BTN_4decks" Margin="0 0 20 0" Click="BTN_4decks_Click" Style="{DynamicResource ButtonTransparent}">
+                <Button Name="BTN_4decks" Margin="0 0 20 0"  Style="{DynamicResource ButtonTransparent}">
                     <Image Source="/Images/GameAssets/cards/4_of_hearts.png" Width="150"></Image>
                 </Button>
-                <Button Name="BTN_6decks" Margin="0 0 20 0" Click="BTN_6decks_Click" Style="{DynamicResource ButtonTransparent}">
+                <Button Name="BTN_6decks" Margin="0 0 20 0"  Style="{DynamicResource ButtonTransparent}">
                     <Image Source="/Images/GameAssets/cards/6_of_hearts.png" Width="150"></Image>
                 </Button>
-                <Button Name="BTN_8decks" Click="BTN_8decks_Click" Style="{DynamicResource ButtonTransparent}">
+                <Button Name="BTN_8decks" Style="{DynamicResource ButtonTransparent}">
                     <Image Source="/Images/GameAssets/cards/8_of_hearts.png" Width="150"></Image>
                 </Button>
             </StackPanel>

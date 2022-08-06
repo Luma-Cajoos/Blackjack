@@ -97,7 +97,6 @@ A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic St
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGame.baml
 A:\Personal\Appdev\Blackjack with Basic Strategy learner\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\GameAssets\Cards\back.png
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Data\coins.txt
-C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrowreturn.png
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\background.png
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\backgroundHowToPlay.png
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\coin.png
@@ -308,3 +307,10 @@ A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrow_back.png
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BasicStrategyTrainer.g.cs
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BasicStrategyTrainer.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BasicStrategyTrainer.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerGameSettings.g.cs
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Images\arrow_back.png
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BasicStrategyTrainer.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\BlackjackGameSettings.baml
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerGameSettings.baml
