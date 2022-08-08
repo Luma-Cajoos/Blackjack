@@ -289,7 +289,8 @@ namespace Blackjack_with_Basic_Strategy_learner
 
                 if (blackjackPayout)
                 {
-                    Coins.Amount += (Game._currentBet * 2.5);
+                    double payout = Game._currentBet * 2.5;
+                    Coins.Amount += payout;
                     MessageBox.Show("blackjack");
                 }
                 else
