@@ -14,6 +14,23 @@
         <Grid Margin="0 50 0 70">
             <TextBlock Style="{DynamicResource PageTitle}" HorizontalAlignment="Center">Deck Is Empty</TextBlock>
         </Grid>
+        <Grid Margin="50 30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock Style="{DynamicResource H2}" Margin="0 0 0 10">This attempt</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Name="TimerText" Style="{DynamicResource MainText}" Margin="0 0 0 20">Time: 0 minutes and 0 seconds</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Name="MistakesText" Style="{DynamicResource MainText}" Margin="0 0 0 20">Mistakes: 0</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                <TextBlock Style="{DynamicResource H2}" Margin="0 0 0 10">Personal best</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Name="TimerBestText" Style="{DynamicResource MainText}" Margin="0 0 0 20">Time: 0 minutes and 0 seconds</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Name="MistakesBestText" Style="{DynamicResource MainText}" Margin="0 0 0 20">Mistakes: 0</TextBlock>
+            </StackPanel>
+        </Grid>
         <StackPanel Margin="50 0">
             <Button Name="BTNRestart" Click="BTNRestart_Click" Margin="0 0 0 50" Padding="20" FontSize="24" Style="{StaticResource ButtonStyleYellow}">
                 <Button.Resources>

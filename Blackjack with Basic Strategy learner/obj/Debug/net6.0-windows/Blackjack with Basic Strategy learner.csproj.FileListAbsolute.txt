@@ -316,3 +316,4 @@ C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\o
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerGameSettings.baml
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerGameSettings.g.cs
 A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\HiLoTrainerGameSettings.baml
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Data\HiLoCardPersonalBest.txt

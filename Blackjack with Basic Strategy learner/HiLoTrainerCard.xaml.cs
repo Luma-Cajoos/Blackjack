@@ -22,6 +22,14 @@ namespace Blackjack_with_Basic_Strategy_learner
     {
         public HiLoTrainingGame Game { get; set; }
 
+        // timer
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool TimerStarted { get; set; } = false;
+
+        // mistakes
+        public int Mistakes { get; set; } = 0;
+
         public HiLoTrainerCard()
         {
             InitializeComponent();
@@ -38,7 +46,9 @@ namespace Blackjack_with_Basic_Strategy_learner
                 TextBlockCardsLeft.Text = $"{52 - Game.CardsDrawn} cards left";
             } else
             {
-                App.ParentWindowRef.ParentFrame.Navigate(new HiLoTrainerCardReset());
+                EndTime = DateTime.Now;
+                TimeSpan time = EndTime - StartTime;
+                App.ParentWindowRef.ParentFrame.Navigate(new HiLoTrainerCardReset(time, Mistakes));
             }
         }
 
@@ -47,7 +57,13 @@ namespace Blackjack_with_Basic_Strategy_learner
             if (e.Key.ToString() == "Return")
             {
                 if(InputCount.Text != "")
-                {                    
+                {
+                    if (!TimerStarted)
+                    {
+                        TimerStarted = true;
+                        StartTime = DateTime.Now;
+                    }
+
                     bool parsedCorrect = int.TryParse(InputCount.Text, out int guess);
                     if (parsedCorrect)
                     {
@@ -58,6 +74,7 @@ namespace Blackjack_with_Basic_Strategy_learner
                             LabelGuessResult.Content = $"CORRECT";
                         } else
                         {
+                            Mistakes++;
                             LabelGuessResult.Content = $"WRONG IT WAS {Game.RunningCount}";
                         }
                         UpdateCard();
