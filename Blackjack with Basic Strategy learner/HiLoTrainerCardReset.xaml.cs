@@ -48,6 +48,16 @@ namespace Blackjack_with_Basic_Strategy_learner
             }
 
             GetPersonalBest();
+
+            // when to save the new attempt
+            if((Time < TimeBest && Mistakes <= MistakesBest) || Mistakes < MistakesBest || (Time == TimeBest && Mistakes < MistakesBest))
+            {
+                SavePersonalBest();
+                GetPersonalBest();
+            }
+
+            UpdatePersonalBestTextFields();
+
         }
 
         private void GetPersonalBest()
@@ -56,8 +66,21 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             string[] dataArr = data.Split(',');
 
-            TimerBestText.Text = $"Time: {dataArr[0]} minutes and {dataArr[1]} seconds.";
-            MistakesBestText.Text = $"Mistakes: {dataArr[2]}";
+            MistakesBest = int.Parse(dataArr[2]);
+            TimeBest = new TimeSpan(0, int.Parse(dataArr[0]), int.Parse(dataArr[1]));
+
+        }
+
+        private void UpdatePersonalBestTextFields()
+        {
+            TimerBestText.Text = $"Time: {TimeBest.Minutes} minutes and {TimeBest.Seconds} seconds.";
+            MistakesBestText.Text = $"Mistakes: {MistakesBest}";
+        }
+
+        private void SavePersonalBest()
+        {
+            string personalBest = $"{Time.Minutes},{Time.Seconds},{Mistakes}";
+            File.WriteAllText(Path, personalBest);
         }
 
         private void BTNMainMenu_Click(object sender, RoutedEventArgs e)
