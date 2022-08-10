@@ -57,6 +57,7 @@
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom">
+                <Button Name="BTNResetCoins" Click="ResetCoinsBTN_Click" Style="{StaticResource ButtonStyleYellow}" Padding="10" Margin="0 0 0 20">Reset coins</Button>
                 <Button Name="BTNDeal" Click="BTNDeal_Click" Style="{StaticResource ButtonStyleYellow}" Padding="10" Margin="0 0 0 20">Deal Now</Button>
                 <Grid>
                     <Grid.ColumnDefinitions>

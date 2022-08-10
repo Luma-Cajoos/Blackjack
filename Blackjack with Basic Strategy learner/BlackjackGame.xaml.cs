@@ -47,6 +47,9 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             // update cards left label
             UpdateLabelCardsLeft();
+
+            // check the amount of coins for the reset button
+            CheckResetCoinsBTN();
         }
 
         private void UpdateCoins()
@@ -332,6 +335,9 @@ namespace Blackjack_with_Basic_Strategy_learner
                 MessageBox.Show("deck shuffled");
 
             }
+
+            // check the amount of coins for the reset button
+            CheckResetCoinsBTN();
         }
 
         // event methods
@@ -754,6 +760,18 @@ namespace Blackjack_with_Basic_Strategy_learner
 
             // change margin on first label
             RectFirstDeck.Margin = new Thickness(135, 0, 135, 0);
+        }
+
+
+        private void ResetCoinsBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Coins.ResetCoins();
+            CheckResetCoinsBTN();
+            UpdateCoins();
+        }
+        private void CheckResetCoinsBTN()
+        {
+            BTNResetCoins.IsEnabled = !(Coins.Amount > 10);
         }
     }
 }
