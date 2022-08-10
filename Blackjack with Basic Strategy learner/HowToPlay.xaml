@@ -38,6 +38,7 @@
                         Note: When your hand is immediately a Blackjack at a 3 to 2 table, you win 1.5 ratio with your bets.
                         </TextBlock>
                     </StackPanel>
+                    <StackPanel></StackPanel>
                     <StackPanel Margin="0 0 0 20">
                         <TextBlock Style="{DynamicResource H3}">Values Of The Cards</TextBlock>
                         <TextBlock Padding="0 0 0 16"  Style="{DynamicResource MainText}">

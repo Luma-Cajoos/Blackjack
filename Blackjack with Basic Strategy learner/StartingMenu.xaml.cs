@@ -28,24 +28,20 @@ namespace Blackjack_with_Basic_Strategy_learner
             InitializeComponent();
 
             Coins = new Coins();
-            CheckResetBTN();
+          
             UpdateCoins();
         }
-        private void CheckResetBTN()
-        {
-            BTNReset.IsEnabled = !(Coins.Amount > 10);
-        }
+        
 
         private void UpdateCoins()
         {
             CoinDisplay.Text = Coins.Amount.ToString();
-            CheckResetBTN();
+           
         }
 
-        private void BTNReset_Click(object sender, RoutedEventArgs e)
+        private void BTNCredits_Click(object sender, RoutedEventArgs e)
         {
-            Coins.ResetCoins();
-            UpdateCoins();
+            App.ParentWindowRef.ParentFrame.Navigate(new Credits());
         }
 
         private void BTNPlay_Click(object sender, RoutedEventArgs e)

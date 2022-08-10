@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\
 Blackjack_with_Basic_Strategy_learner
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\App.xaml
-10-2105331412
+C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\App.xaml
+11-1779713138
 70337057307
-19-1264065740
-1941905061893
-BasicStrategyTrainer.xaml;BlackjackGame.xaml;BlackjackGameSettings.xaml;HiLoChoice.xaml;HiLoTrainerCard.xaml;HiLoTrainerCardReset.xaml;HiLoTrainerGameSettings.xaml;HowToPlay.xaml;MainWindow.xaml;StartingMenu.xaml;
+20-865060607
+194-200944676
+BasicStrategyTrainer.xaml;BlackjackGame.xaml;BlackjackGameSettings.xaml;Credits.xaml;HiLoChoice.xaml;HiLoTrainerCard.xaml;HiLoTrainerCardReset.xaml;HiLoTrainerGameSettings.xaml;HowToPlay.xaml;MainWindow.xaml;StartingMenu.xaml;
 
-False
+True
 

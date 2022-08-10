@@ -16,6 +16,9 @@
     <Compile Update="BlackjackGameSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Credits.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HiLoChoice.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="BlackjackGameSettings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Credits.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="HiLoChoice.xaml">

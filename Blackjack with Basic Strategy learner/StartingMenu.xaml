@@ -56,13 +56,13 @@
                 </Button.Resources>
                 How To Play
             </Button>
-            <Button Name="BTNReset" Click="BTNReset_Click" Style="{DynamicResource ButtonStyleOrange}" Grid.Column="1" Margin="20 0 0 0" Padding="20" FontSize="24">
+            <Button Name="BTNCredits" Click="BTNCredits_Click" Style="{DynamicResource ButtonStyleOrange}" Grid.Column="1" Margin="20 0 0 0" Padding="20" FontSize="24">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
-                Reset Coins
+                Credits
             </Button>
         </Grid>
         <Grid Margin="30 30 30 0">
