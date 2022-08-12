@@ -123,12 +123,13 @@
                     
                 </StackPanel>
             </Grid>
-            <StackPanel Grid.Column="2" Grid.Row="0">
+            <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
                 <TextBlock Name="LabelCardsLeft" Style="{DynamicResource MainText}" Margin="0 0 0 20">Cards left in the shoe: counting...</TextBlock>
                 <TextBlock Name="LabelResult" Style="{DynamicResource MainText}" FontWeight="Bold">Your last round was a ...</TextBlock>
                 <StackPanel Margin="0 50 0 0">
                     <TextBlock Style="{DynamicResource H2}">Table Rules</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">- Blackjack deals 3:2</TextBlock>
+                    <TextBlock Style="{DynamicResource MainText}">- Dealer stands on soft 17</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">- No double after split</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">- You may hit after splitting aces</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">- No surrender</TextBlock>
