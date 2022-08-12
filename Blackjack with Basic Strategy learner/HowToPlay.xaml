@@ -356,9 +356,9 @@
                         <StackPanel Grid.Row="3" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
                         </StackPanel>                        
-<!--Player 16-->
+<!--Player 15-->
                         <StackPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">
-                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">16</TextBlock>
+                            <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">15</TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Style="{DynamicResource MainText}" >Stand</TextBlock>
