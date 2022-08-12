@@ -31,6 +31,7 @@ namespace Blackjack_with_Basic_Strategy_learner
         // split vars
         StackPanel SplitDeckPanel = null;
         Label SplitDeckLabel = null;
+        Rectangle SplitRectangle = null;
 
         public BlackjackGame(int decksInPlay)
         {
@@ -128,6 +129,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             // create img
             Image cardImg = new Image();
             cardImg.Width = 110;
+            cardImg.Margin = new Thickness(5, 10, 0, 0);
 
             BitmapImage src = new BitmapImage();
             src.BeginInit();
@@ -382,8 +384,27 @@ namespace Blackjack_with_Basic_Strategy_learner
             if (Game._playerUsedSplit && Game._activeDeck == 0)
             {
                 Game._activeDeck = 1;
+                
+                // styling right deck
+                SplitRectangle.Opacity = 0.5;
+                SplitRectangle.Fill = Brushes.Black;
+                SplitDeckLabel.Foreground = Brushes.White;
+
+                // styling left deck
+                RectFirstDeck.Opacity = 1;
+                RectFirstDeck.Fill = (Brush)new BrushConverter().ConvertFromString("#FFE600");
+                LabelPlayerTotal.Foreground = Brushes.Black;
+
             } else
             {
+                if (Game._playerUsedSplit)
+                {
+                    // reset styling left deck
+                    RectFirstDeck.Opacity = 0.5;
+                    RectFirstDeck.Fill = Brushes.Black;
+                    LabelPlayerTotal.Foreground = Brushes.White;
+                }
+
                 EndGame(false);
             }
         }
@@ -459,6 +480,16 @@ namespace Blackjack_with_Basic_Strategy_learner
             if (Game._playerTotalSplit == 21)
             {
                 Game._activeDeck = 1;
+
+                // styling right deck
+                SplitRectangle.Opacity = 0.5;
+                SplitRectangle.Fill = Brushes.Black;
+                SplitDeckLabel.Foreground = Brushes.White;
+
+                // styling left deck
+                RectFirstDeck.Opacity = 1;
+                RectFirstDeck.Fill = (Brush)new BrushConverter().ConvertFromString("#FFE600");
+                LabelPlayerTotal.Foreground = Brushes.Black;
             }
             
             if (Game._playerTotalSplit == 21 && Game._playerTotal == 21)
@@ -738,11 +769,11 @@ namespace Blackjack_with_Basic_Strategy_learner
             // create rectangle
             Rectangle rectangle = new Rectangle()
             {
-                Fill = Brushes.Black,
-                Opacity = 0.5,
+                Fill = (Brush)new BrushConverter().ConvertFromString("#FFE600"),
                 Margin = new Thickness(135, 0, 135, 0)
             };
 
+            SplitRectangle = rectangle;
             labelGrid.Children.Add(rectangle);
 
             // create label
@@ -750,7 +781,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             labelSplitTotal.HorizontalAlignment = HorizontalAlignment.Center;
             labelSplitTotal.Padding = new Thickness(0, 10, 0, 10);
             labelSplitTotal.FontSize = 20;
-            labelSplitTotal.Foreground = Brushes.White;
+            labelSplitTotal.Foreground = Brushes.Black;
             labelSplitTotal.Content = "0";
 
             SplitDeckLabel = labelSplitTotal;
