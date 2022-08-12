@@ -181,9 +181,8 @@
                             </StackPanel>
                         </Grid>
                     </StackPanel>
-
                 </StackPanel>
-                <StackPanel Margin="30 0 30 20">
+                <StackPanel Margin="30  0 30 30">
                     <TextBlock  Style="{DynamicResource H2}" HorizontalAlignment="Left"> Basic Strategy</TextBlock>
                     <TextBlock Style="{DynamicResource MainText}">
                         Here you find an table of basic strategy, it is very important that you memorize it. In the vertical column, you find the numbers that represents the sum of your hand. Horizontally you find the number of the open card of the dealer. Use this two numbers to decide in the table what the best move is to do. These are basic hints, but it could be the best decision you make. <Bold>Ds</Bold>  means that you must Double if possible, otherwise stand. <Bold>Yes/No</Bold> means that you Split when double after split is allowed, otherwise do not split. If the graph says Double (not Ds), and you can't double, Hit instead.           
@@ -1349,18 +1348,16 @@
                             <TextBlock Style="{DynamicResource MainText}">No</TextBlock>
                         </StackPanel>
                       </Grid>
-                    <Grid>
-                        <StackPanel Margin="0 0 0 20">
-                            <TextBlock Style="{DynamicResource H2}">The Black Jack Gamemode</TextBlock>
-                            <StackPanel Margin="0 0 0 10">
-                                <TextBlock Style="{DynamicResource MainText}">When you click on Play Blackjack, you must decide how many decks you want to play with. You can choose between 2, 4, 6, or 8 decks. After making your choice it will redirect you to the main game page. When the shoe is at 20%, it automatically reshuffles the used cards and the cards left in the shoe. As a start, you get 500 coins for free. When you lose all your chips, you can click the reset button for a refund of your original 500 coins.</TextBlock>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBlock Style="{DynamicResource H3}">The Game Screen</TextBlock>
-                                <TextBlock Style="{DynamicResource MainText}">On the left, you can see your money chips. With a left-click on a chip, you increase your bet with that value. With a right-click, you decrease your bet with that value. When you click the deal button you finalize your bet. On the right, you can see your current bet, and the balance you have in total. It goes down when you bet, and up when you win. Below it, you see the different decisions you can make. When it is not possible to split, you will not be able to click that button. At the top, you see the word "dealer": here you will see the hand of the dealer and the total of his cards. At the bottom, you will see your hand and the total of your cards.</TextBlock>
-                            </StackPanel>                         
-                        </StackPanel>
-                    </Grid>
+                </StackPanel>
+                <StackPanel Margin="30  0 30 30">
+                    <TextBlock Style="{DynamicResource H2}">The Black Jack Gamemode</TextBlock>
+                    <StackPanel Margin="0 0 0 10">
+                        <TextBlock Style="{DynamicResource MainText}">When you click on Play Blackjack, you must decide how many decks you want to play with. You can choose between 2, 4, 6, or 8 decks. After making your choice it will redirect you to the main game page. When the shoe is at 20%, it automatically reshuffles the used cards and the cards left in the shoe. As a start, you get 500 coins for free. When you lose all your chips, you can click the reset button for a refund of your original 500 coins.</TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Style="{DynamicResource H3}">The Game Screen</TextBlock>
+                        <TextBlock Style="{DynamicResource MainText}">On the left, you can see your money chips. With a left-click on a chip, you increase your bet with that value. With a right-click, you decrease your bet with that value. When you click the deal button you finalize your bet. On the right, you can see your current bet, and the balance you have in total. It goes down when you bet, and up when you win. Below it, you see the different decisions you can make. When it is not possible to split, you will not be able to click that button. At the top, you see the word "dealer": here you will see the hand of the dealer and the total of his cards. At the bottom, you will see your hand and the total of your cards.</TextBlock>
+                    </StackPanel>                         
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

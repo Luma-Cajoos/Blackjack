@@ -183,6 +183,7 @@ namespace Blackjack_with_Basic_Strategy_learner
             // create img
             Image cardImg = new Image();
             cardImg.Width = 110;
+            cardImg.Margin = new Thickness(5, 10, 0, 0);
 
             BitmapImage src = new BitmapImage();
             src.BeginInit();
