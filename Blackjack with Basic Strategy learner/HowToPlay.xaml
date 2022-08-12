@@ -1351,13 +1351,14 @@
                       </Grid>
                     <Grid>
                         <StackPanel Margin="0 0 0 20">
-                            <TextBlock Style="{DynamicResource H2}">The Black Jack Game</TextBlock>
-                            <TextBlock Style="{DynamicResource MainText}">                            
-                                When you click on Play Blackjack, you need decide how many decks you want to play with. You can choose between 2, 4, 6 or 8 decks. When the shoe is low, it automatically reshuffles the used cards and the cards left in the shoe. 
-                                When you choose, you see the main screen. On the left side, you see your money chips. With a left-click on a chip, you place a bet with that value. With a right-click, you lower your bet with the clicked value. As a start, you get 500 dollars for free.  On the right, you can see your bet, and the balance you have in total. It goes down when you bet, and up when you win. In the top, you see the word "dealer". Here you will see the hand of the dealer and the count of it. In the  bottom, you will see your hand and your count. 
-                                Below it, you see the different decisions you can make. When it is for example not possible to split, you will not be able to click that button. 
-                                When you lose all your chips, you can click the reset button, and you will get 500 dollars for free. The dealing starts when you click on Deal Now. Good Luck!                                
-                            </TextBlock>                            
+                            <TextBlock Style="{DynamicResource H2}">The Black Jack Gamemode</TextBlock>
+                            <StackPanel Margin="0 0 0 10">
+                                <TextBlock Style="{DynamicResource MainText}">When you click on Play Blackjack, you must decide how many decks you want to play with. You can choose between 2, 4, 6, or 8 decks. After making your choice it will redirect you to the main game page. When the shoe is at 20%, it automatically reshuffles the used cards and the cards left in the shoe. As a start, you get 500 coins for free. When you lose all your chips, you can click the reset button for a refund of your original 500 coins.</TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Style="{DynamicResource H3}">The Game Screen</TextBlock>
+                                <TextBlock Style="{DynamicResource MainText}">On the left, you can see your money chips. With a left-click on a chip, you increase your bet with that value. With a right-click, you decrease your bet with that value. When you click the deal button you finalize your bet. On the right, you can see your current bet, and the balance you have in total. It goes down when you bet, and up when you win. Below it, you see the different decisions you can make. When it is not possible to split, you will not be able to click that button. At the top, you see the word "dealer": here you will see the hand of the dealer and the total of his cards. At the bottom, you will see your hand and the total of your cards.</TextBlock>
+                            </StackPanel>                         
                         </StackPanel>
                     </Grid>
                 </StackPanel>

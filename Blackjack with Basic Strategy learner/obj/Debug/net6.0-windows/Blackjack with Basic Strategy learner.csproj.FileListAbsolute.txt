@@ -320,3 +320,5 @@ A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\bin\Debug\net6.0-windows\Data\HiLoCardPersonalBest.txt
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Credits.g.cs
 C:\Users\Lucaj\Desktop\Mathias\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Credits.baml
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Credits.g.cs
+A:\Personal\Appdev\Blackjack\Blackjack with Basic Strategy learner\obj\Debug\net6.0-windows\Credits.baml
