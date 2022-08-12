@@ -566,7 +566,7 @@
                             <TextBlock Style="{DynamicResource MainText}" FontWeight="Bold">9</TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>
+                            <TextBlock Style="{DynamicResource MainText}" >Hit</TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Row="10" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Style="{DynamicResource MainText}" >Double</TextBlock>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Blackjack_with_Basic_Strategy_learner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1300"
+        Title="Blackjack Trainer" Height="800" Width="1300"
         ResizeMode="NoResize" Loaded="Window_Loaded">
     <DockPanel>
         <Frame Name="ParentFrame"/>
